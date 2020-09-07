@@ -11,7 +11,10 @@
     "start": "node server.js",
     "build": "cd client && npm run build && npm run build-storybook",
     "prettify": "prettier --write .",
-    "lint": "eslint . --ext .js"
+    "lint": "eslint . --ext .js",
+    "client": "npm run storybook && npm run cra",
+    "storybook": "cd client && npm run storybook",
+    "cra": "cd client && npm run start"
   },
   "repository": {
     "type": "git",
