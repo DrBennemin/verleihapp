@@ -1,27 +1,28 @@
 {
-  "name": "fullstacktemplate",
+  "name": "verleihapp",
+  "privat": "true",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "cd client && npm test",
+    "test": "npm run lint && cd client && npm test",
     "postinstall": "cd client && npm install",
     "start": "node server.js",
-    "build": "cd client && npm run build",
+    "build": "cd client && npm run build && npm run build-storybook",
     "prettify": "prettier --write .",
     "lint": "eslint . --ext .js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DrBennemin/Full-Stack-Template.git"
+    "url": "git+https://github.com/DrBennemin/verleihapp.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DrBennemin/Full-Stack-Template/issues"
+    "url": "https://github.com/DrBennemin/verleihapp/issues"
   },
-  "homepage": "https://github.com/DrBennemin/Full-Stack-Template#readme",
+  "homepage": "https://github.com/DrBennemin/verleihapp#readme",
   "private": true,
   "dependencies": {
     "express": "^4.17.1"
@@ -36,6 +37,7 @@
     "eslint-plugin-flowtype": "^4.7.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^2.5.1",
     "husky": "^4.2.5",
