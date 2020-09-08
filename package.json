@@ -28,6 +28,8 @@
   "homepage": "https://github.com/DrBennemin/verleihapp#readme",
   "private": true,
   "dependencies": {
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
     "express": "^4.17.1",
     "json-server": "^0.16.1"
   },
