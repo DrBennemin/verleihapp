@@ -15,13 +15,16 @@ const GlobalCSS = () => {
           width: 100vw;
           height: 100vh;
           display: grid;
-          grid-template-rows: 10% 1fr 10%;
+          grid-template-rows: auto 1fr 10%;
         }
         html {
         }
         body {
           margin: 0;
           background-color: #f6f6f6;
+        }
+        h1 {
+          margin: 0;
         }
         code {
         }
