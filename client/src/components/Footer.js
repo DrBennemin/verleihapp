@@ -4,17 +4,17 @@ import Add from "../assets/plus.svg";
 
 const Footer = styled.div`
   display: flex;
-  flex-direction: row;
-  place-items: center;
+  justify-content: center;
   background-color: #28beb4;
 `;
 
 const Button = styled.button`
   display: flex;
+  padding: 0;
   align-self: center;
   border-radius: 50px;
   background-color: #28beb4;
-  border: none;
+  border: 4px solid #f6f6f6;
 `;
 
 function footer() {
