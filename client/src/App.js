@@ -15,7 +15,7 @@ function App() {
     <>
       <GlobalStyles />
       <Header />
-      <List />
+      <List></List>
       <Footer />
     </>
   );
