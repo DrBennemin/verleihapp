@@ -9,57 +9,54 @@ const ListItem = styled.div`
   padding: 10px;
   margin: 5px;
   border-radius: 50px;
-  max-width: 75%;
+  max-width: 90%;
 `;
 
 const Titel = styled.span`
   font-weight: bold;
+  padding: 0 10px;
 `;
 
-const SerialNo = styled.span``;
+const Preview = styled.img`
+  min-width: 40px;
+  min-height: 40px;
+`;
+
+// const SerialNo = styled.span``;
 
 function listItem() {
   return (
     <>
       <ListItem>
-        <img src={ItemPreview} alt="item-preview" />
-        <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
-        <SerialNo>8710103565840</SerialNo>
-      </ListItem>
-      <ListItem>
-        <img src={ItemPreview} alt="item-preview" />
+        <Preview src={ItemPreview} alt="item-preview" />
         <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
       </ListItem>
       <ListItem>
-        <img src={ItemPreview} alt="item-preview" />
+        <Preview src={ItemPreview} alt="item-preview" />
         <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
       </ListItem>
       <ListItem>
-        <img src={ItemPreview} alt="item-preview" />
+        <Preview src={ItemPreview} alt="item-preview" />
         <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
       </ListItem>
       <ListItem>
-        <img src={ItemPreview} alt="item-preview" />
+        <Preview src={ItemPreview} alt="item-preview" />
         <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
       </ListItem>
       <ListItem>
-        <img src={ItemPreview} alt="item-preview" />
+        <Preview src={ItemPreview} alt="item-preview" />
         <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
       </ListItem>
       <ListItem>
-        <img src={ItemPreview} alt="item-preview" />
+        <Preview src={ItemPreview} alt="item-preview" />
         <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
       </ListItem>
       <ListItem>
-        <img src={ItemPreview} alt="item-preview" />
+        <Preview src={ItemPreview} alt="item-preview" />
         <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
       </ListItem>
       <ListItem>
-        <img src={ItemPreview} alt="item-preview" />
-        <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
-      </ListItem>
-      <ListItem>
-        <img src={ItemPreview} alt="item-preview" />
+        <Preview src={ItemPreview} alt="item-preview" />
         <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
       </ListItem>
     </>

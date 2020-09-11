@@ -22,6 +22,7 @@ const GlobalCSS = () => {
         body {
           margin: 0;
           background-color: #f6f6f6;
+          overflow: auto;
         }
         h1 {
           margin: 0;

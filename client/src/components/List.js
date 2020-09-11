@@ -7,6 +7,7 @@ const Main = styled.main`
   flex-direction: column;
   align-items: center;
   flex-grow: 1;
+  padding: 10px 0 30px 0;
 `;
 
 function List() {
