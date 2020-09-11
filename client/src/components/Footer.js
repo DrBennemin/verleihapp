@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import Add from "../assets/plus.svg";
 
-const Footer = styled.div`
+const Footer = styled.footer`
   display: flex;
   justify-content: center;
   background-color: #28beb4;
@@ -21,13 +21,11 @@ const Button = styled.button`
 
 function footer() {
   return (
-    <div>
-      <Footer>
-        <Button href="#">
-          <img src={Add} alt="plus" />
-        </Button>
-      </Footer>
-    </div>
+    <Footer>
+      <Button href="#">
+        <img src={Add} alt="plus" />
+      </Button>
+    </Footer>
   );
 }
 

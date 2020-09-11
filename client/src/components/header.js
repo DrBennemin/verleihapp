@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import Menu from "../assets/menu.svg";
 import Search from "../assets/search.svg";
 
-const Header = styled.div`
+const Header = styled.header`
   display: flex;
   padding: 46px 0 13px 0;
   flex-direction: row;
