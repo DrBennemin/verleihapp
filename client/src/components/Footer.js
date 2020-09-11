@@ -10,18 +10,20 @@ const Footer = styled.div`
 
 const Button = styled.button`
   display: flex;
-  padding: 0;
+  padding: 10px;
   align-self: center;
   border-radius: 50px;
   background-color: #28beb4;
-  border: 4px solid #f6f6f6;
+  border: 10px solid #f6f6f6;
+  margin-bottom: 35px;
+  margin-top: -35px;
 `;
 
 function footer() {
   return (
     <div>
       <Footer>
-        <Button>
+        <Button href="#">
           <img src={Add} alt="plus" />
         </Button>
       </Footer>
