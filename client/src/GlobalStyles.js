@@ -14,8 +14,8 @@ const GlobalCSS = () => {
           font-family: lato;
           width: 100vw;
           height: 100vh;
-          display: grid;
-          grid-template-rows: auto 1fr auto;
+          display: flex;
+          flex-direction: column;
         }
         html {
         }
