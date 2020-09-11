@@ -1,0 +1,34 @@
+import React from "react";
+import styled from "@emotion/styled";
+import Add from "../assets/plus.svg";
+
+const Footer = styled.div`
+  display: flex;
+  justify-content: center;
+  background-color: #28beb4;
+`;
+
+const Button = styled.button`
+  display: flex;
+  padding: 10px;
+  align-self: center;
+  border-radius: 50px;
+  background-color: #28beb4;
+  border: 10px solid #f6f6f6;
+  margin-bottom: 35px;
+  margin-top: -35px;
+`;
+
+function footer() {
+  return (
+    <div>
+      <Footer>
+        <Button href="#">
+          <img src={Add} alt="plus" />
+        </Button>
+      </Footer>
+    </div>
+  );
+}
+
+export default footer;

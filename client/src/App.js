@@ -1,6 +1,7 @@
 import React from "react";
 import GlobalStyles from "./GlobalStyles";
-import Header from "./components/header";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 /* import {
   BrowserRouter as Router,
   Switch,
@@ -14,6 +15,7 @@ function App() {
       <GlobalStyles />
       <Header />
       moin
+      <Footer />
     </>
   );
 }
