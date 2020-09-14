@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "@emotion/styled";
 import ItemPreview from "../assets/item-preview.png";
-import ItemStatus from "../assets/download.svg";
+import ItemStatusAvailable from "../assets/download.svg";
+import ItemStatusNotAvailable from "../assets/not-available.svg";
+import ItemStatusRented from "../assets/rented.svg";
 
 const ListItem = styled.div`
   display: flex;
@@ -10,12 +12,13 @@ const ListItem = styled.div`
   padding: 10px;
   margin: 5px;
   border-radius: 50px;
-  max-width: 50%;
+  max-width: 90%;
 `;
 
 const Preview = styled.img`
-  min-width: 40px;
-  min-height: 40px;
+  max-width: 70px;
+  max-height: 70px;
+  align-self: center;
 `;
 
 const Titel = styled.div`
@@ -24,8 +27,6 @@ const Titel = styled.div`
 `;
 
 const Details = styled.div`
-  display: flex;
-  flex-wrap: wrap;
   padding: 0 10px;
 `;
 
@@ -35,7 +36,9 @@ const Status = styled.img`
   padding-right: 10px;
 `;
 
-const SerialNo = styled.span``;
+const SerialNo = styled.span`
+  display: flex;
+`;
 
 function listItem() {
   return (
@@ -45,7 +48,7 @@ function listItem() {
         <Details>
           <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
           <SerialNo>
-            <Status src={ItemStatus} alt="status" />
+            <Status src={ItemStatusAvailable} alt="status" />
             8710103565840
           </SerialNo>
         </Details>
@@ -55,7 +58,7 @@ function listItem() {
         <Details>
           <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
           <SerialNo>
-            <Status src={ItemStatus} alt="status" />
+            <Status src={ItemStatusAvailable} alt="status" />
             8710103565840
           </SerialNo>
         </Details>
@@ -65,7 +68,7 @@ function listItem() {
         <Details>
           <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
           <SerialNo>
-            <Status src={ItemStatus} alt="status" />
+            <Status src={ItemStatusAvailable} alt="status" />
             8710103565840
           </SerialNo>
         </Details>
@@ -75,7 +78,47 @@ function listItem() {
         <Details>
           <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
           <SerialNo>
-            <Status src={ItemStatus} alt="status" />
+            <Status src={ItemStatusNotAvailable} alt="status" />
+            8710103565840
+          </SerialNo>
+        </Details>
+      </ListItem>
+      <ListItem>
+        <Preview src={ItemPreview} alt="item-preview" />
+        <Details>
+          <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
+          <SerialNo>
+            <Status src={ItemStatusNotAvailable} alt="status" />
+            8710103565840
+          </SerialNo>
+        </Details>
+      </ListItem>
+      <ListItem>
+        <Preview src={ItemPreview} alt="item-preview" />
+        <Details>
+          <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
+          <SerialNo>
+            <Status src={ItemStatusNotAvailable} alt="status" />
+            8710103565840
+          </SerialNo>
+        </Details>
+      </ListItem>
+      <ListItem>
+        <Preview src={ItemPreview} alt="item-preview" />
+        <Details>
+          <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
+          <SerialNo>
+            <Status src={ItemStatusRented} alt="status" />
+            8710103565840
+          </SerialNo>
+        </Details>
+      </ListItem>
+      <ListItem>
+        <Preview src={ItemPreview} alt="item-preview" />
+        <Details>
+          <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
+          <SerialNo>
+            <Status src={ItemStatusRented} alt="status" />
             8710103565840
           </SerialNo>
         </Details>
