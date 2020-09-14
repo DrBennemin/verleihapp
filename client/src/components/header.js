@@ -20,13 +20,9 @@ const Header = styled.header`
 function header() {
   return (
     <Header>
-      <a href="#">
-        <img src={Menu} alt="menu-icon" />
-      </a>
+      <img src={Menu} alt="menu-icon" />
       <h1>Verleih-app</h1>
-      <a href="#">
-        <img src={Search} alt="search-icon" />
-      </a>
+      <img src={Search} alt="search-icon" />
     </Header>
   );
 }

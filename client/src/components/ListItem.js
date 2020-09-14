@@ -10,7 +10,7 @@ const ListItem = styled.div`
   padding: 10px;
   margin: 5px;
   border-radius: 50px;
-  max-width: 30%;
+  max-width: 50%;
 `;
 
 const Preview = styled.img`

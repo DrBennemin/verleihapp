@@ -24,6 +24,7 @@ const GlobalCSS = () => {
           background-color: #f6f6f6;
           overflow: auto;
         }
+
         h1 {
           margin: 0;
         }
