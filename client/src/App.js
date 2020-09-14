@@ -1,7 +1,7 @@
 import React from "react";
 import GlobalStyles from "./GlobalStyles";
 import Header from "./components/Header";
-import List from "./components/List";
+import List from "./pages/List";
 import Footer from "./components/Footer";
 /* import {
   BrowserRouter as Router,

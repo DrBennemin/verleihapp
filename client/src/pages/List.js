@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import ListItem from "./ListItem";
+import ListItem from "../components/ListItem";
 
 const Main = styled.main`
   display: flex;
