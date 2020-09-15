@@ -21,6 +21,7 @@ const GlobalCSS = () => {
         }
         body {
           margin: 0;
+          padding: 0;
           background-color: #f6f6f6;
           overflow: auto;
           font-size: 1rem;
@@ -28,6 +29,37 @@ const GlobalCSS = () => {
 
         h1 {
           margin: 0;
+          padding: 0;
+        }
+        label {
+          display: block;
+          font-size: 0.8rem;
+        }
+        input {
+          display: block;
+          min-width: 100%;
+          padding: 8px 10px;
+          border-radius: 50px;
+          border: none;
+          background-color: #fff;
+          margin: 10px 0;
+        }
+        input:focus {
+          outline: none;
+        }
+        ::placeholder {
+          color: #9d9d9c;
+        }
+        select {
+          min-width: 100%;
+          padding: 8px 10px;
+          border-radius: 50px;
+          border: none;
+          background-color: #fff;
+          margin: 10px 0;
+        }
+        select:focus {
+          outline: none;
         }
         code {
         }

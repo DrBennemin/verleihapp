@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import Header from "./components/Header";
 import List from "./pages/List";
 import ArticleDetail from "./pages/ArticleDetail";
+import RentalProcess from "./pages/RentalProcess";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -25,6 +26,9 @@ function App() {
           <Switch>
             <Route path="/article-detail">
               <ArticleDetail />
+            </Route>
+            <Route path="/rental-process">
+              <RentalProcess />
             </Route>
             <Route path="/">
               <List />
