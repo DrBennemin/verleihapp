@@ -21,16 +21,16 @@ function App() {
       <GlobalStyles />
       <Router>
         <Header />
-        <Switch>
-          <Main>
+        <Main>
+          <Switch>
             <Route path="/article-detail">
               <ArticleDetail />
             </Route>
             <Route path="/">
               <List />
             </Route>
-          </Main>
-        </Switch>
+          </Switch>
+        </Main>
         <Footer />
       </Router>
     </>
