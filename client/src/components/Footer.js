@@ -2,6 +2,16 @@ import React from "react";
 import styled from "@emotion/styled";
 import Add from "../assets/plus.svg";
 
+function footer() {
+  return (
+    <Footer>
+      <Button href="#">
+        <img src={Add} alt="plus" />
+      </Button>
+    </Footer>
+  );
+}
+
 const Footer = styled.footer`
   display: flex;
   justify-content: center;
@@ -18,15 +28,5 @@ const Button = styled.button`
   margin-bottom: 35px;
   margin-top: -35px;
 `;
-
-function footer() {
-  return (
-    <Footer>
-      <Button href="#">
-        <img src={Add} alt="plus" />
-      </Button>
-    </Footer>
-  );
-}
 
 export default footer;
