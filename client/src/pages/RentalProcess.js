@@ -8,16 +8,45 @@ const Form = styled.div`
 
 const AdressLine1 = styled.div`
   display: flex;
-  & > input:first-child {
-    flex-grow: 1;
+  justify-content: space-between;
+  width: 100%;
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+  & :first-child {
+    width: 70%;
+  }
+  & :last-child {
+    width: 20%;
   }
 `;
 
-const Street = styled.input`
-  width: 75%;
+const AdressLine2 = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+  & :first-child {
+    width: 35%;
+  }
+  & :last-child {
+    width: 55%;
+  }
 `;
-const HouseNo = styled.input`
-  width: 25%;
+
+const DateSelect = styled.div`
+  display: flex;
+  justify-content: space-between;
+  & :first-child {
+    width: 45%;
+  }
+  & :last-child {
+    width: 45%;
+  }
 `;
 
 function RentalProcess() {
@@ -25,48 +54,51 @@ function RentalProcess() {
     <Form>
       <label>
         Anrede
-        <select>
+        <select required>
           <option value="Herr">Herr</option>
           <option value="Frau">Frau</option>
         </select>
       </label>
       <label>
         Vorname
-        <input placeholder="Vorname eingeben" />
+        <input placeholder="Vorname" required />
       </label>
       <label>
         Nachname
-        <input placeholder="Nachname eingeben" />
+        <input placeholder="Nachname" />
       </label>
       <label>
         E-Mail
-        <input placeholder="E-Mail eingeben" />
+        <input placeholder="E-Mail" />
       </label>
       <label>
         Telefonnummer
-        <input placeholder="Telefonnummer eingeben" />
+        <input placeholder="Telefonnummer" />
       </label>
+
       <AdressLine1>
-        <label>
-          Straße
-          <Street placeholder="Straße eingeben" />
-        </label>
-        <label>
-          Nr.
-          <HouseNo placeholder="Hausnummer eingeben" />
-        </label>
+        <div>
+          <label>Straße</label>
+          <input placeholder="Straße" />
+        </div>
+        <div>
+          <label>Nr.</label>
+          <input placeholder="Nr." />
+        </div>
       </AdressLine1>
 
-      <label>
-        PLZ
-        <input placeholder="PLZ eingeben" />
-      </label>
-      <label>
-        Ort
-        <input placeholder="Ort eingeben" />
-      </label>
+      <AdressLine2>
+        <div>
+          <label>PLZ</label>
+          <input placeholder="PLZ" />
+        </div>
+        <div>
+          <label>Ort</label>
+          <input placeholder="Ort" />
+        </div>
+      </AdressLine2>
 
-      <select>
+      <select required>
         <option value="Artikel">Artikel</option>
         <option value="Artikel2">anderer Artikel</option>
         <option value="Artikel2">anderer Artikel</option>
@@ -77,14 +109,17 @@ function RentalProcess() {
         <option value="Artikel2">anderer Artikel</option>
         <option value="Artikel2">anderer Artikel</option>
       </select>
-      <label>
-        Datum von
-        <input type="date" value="2020-09-15" />
-      </label>
-      <label>
-        Datum bis
-        <input type="date" value="2020-09-15" />
-      </label>
+
+      <DateSelect>
+        <label>
+          Datum von
+          <input type="date" required />
+        </label>
+        <label>
+          Datum bis
+          <input type="date" required />
+        </label>
+      </DateSelect>
     </Form>
   );
 }

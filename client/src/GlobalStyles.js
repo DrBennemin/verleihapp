@@ -19,17 +19,20 @@ const GlobalCSS = () => {
         }
         html {
         }
-        body {
+        body,
+        body div,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
           margin: 0;
           padding: 0;
           background-color: #f6f6f6;
           overflow: auto;
           font-size: 1rem;
-        }
-
-        h1 {
-          margin: 0;
-          padding: 0;
         }
         label {
           display: block;
@@ -38,7 +41,7 @@ const GlobalCSS = () => {
         input {
           display: block;
           min-width: 100%;
-          padding: 8px 10px;
+          padding: 10px;
           border-radius: 50px;
           border: none;
           background-color: #fff;
@@ -52,7 +55,7 @@ const GlobalCSS = () => {
         }
         select {
           min-width: 100%;
-          padding: 8px 10px;
+          padding: 10px;
           border-radius: 50px;
           border: none;
           background-color: #fff;
