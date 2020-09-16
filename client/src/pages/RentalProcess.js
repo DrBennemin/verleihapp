@@ -1,54 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-const Form = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const AdressLine1 = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  div {
-    display: flex;
-    flex-direction: column;
-  }
-  & :first-child {
-    width: 70%;
-  }
-  & :last-child {
-    width: 20%;
-  }
-`;
-
-const AdressLine2 = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  div {
-    display: flex;
-    flex-direction: column;
-  }
-  & :first-child {
-    width: 35%;
-  }
-  & :last-child {
-    width: 55%;
-  }
-`;
-
-const DateSelect = styled.div`
-  display: flex;
-  justify-content: space-between;
-  & :first-child {
-    width: 45%;
-  }
-  & :last-child {
-    width: 45%;
-  }
-`;
-
 function RentalProcess() {
   return (
     <Form>
@@ -75,42 +27,40 @@ function RentalProcess() {
         Telefonnummer
         <input placeholder="Telefonnummer" />
       </label>
-
-      <AdressLine1>
-        <div>
-          <label>Straße</label>
+      <InputStreet>
+        <label>
+          Straße
           <input placeholder="Straße" />
-        </div>
-        <div>
-          <label>Nr.</label>
+        </label>
+        <label>
+          Nr.
           <input placeholder="Nr." />
-        </div>
-      </AdressLine1>
-
-      <AdressLine2>
-        <div>
-          <label>PLZ</label>
+        </label>
+      </InputStreet>
+      <InputCity>
+        <label>
+          PLZ
           <input placeholder="PLZ" />
-        </div>
-        <div>
-          <label>Ort</label>
+        </label>
+        <label>
+          Ort
           <input placeholder="Ort" />
-        </div>
-      </AdressLine2>
-
-      <select required>
-        <option value="Artikel">Artikel</option>
-        <option value="Artikel2">anderer Artikel</option>
-        <option value="Artikel2">anderer Artikel</option>
-        <option value="Artikel2">anderer Artikel</option>
-        <option value="Artikel2">anderer Artikel</option>
-        <option value="Artikel2">anderer Artikel</option>
-        <option value="Artikel2">anderer Artikel</option>
-        <option value="Artikel2">anderer Artikel</option>
-        <option value="Artikel2">anderer Artikel</option>
-      </select>
-
-      <DateSelect>
+        </label>
+      </InputCity>
+      <label>
+        Artikel
+        <select required>
+          <option value="article1">Artikel 1</option>
+          <option value="article2">Artikel 2</option>
+          <option value="article3">Artikel 3</option>
+          <option value="article4">Artikel 4</option>
+          <option value="article5">Artikel 5</option>
+          <option value="article6">Artikel 6</option>
+          <option value="article7">Artikel 7</option>
+          <option value="article8">Artikel 8</option>
+        </select>
+      </label>
+      <InputDate>
         <label>
           Datum von
           <input type="date" required />
@@ -119,9 +69,51 @@ function RentalProcess() {
           Datum bis
           <input type="date" required />
         </label>
-      </DateSelect>
+      </InputDate>
     </Form>
   );
 }
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  label {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
+const InputRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+`;
+
+const InputStreet = styled(InputRow)`
+  & :first-child {
+    width: 70%;
+  }
+  & :last-child {
+    width: 20%;
+  }
+`;
+const InputCity = styled(InputRow)`
+  & :first-child {
+    width: 35%;
+  }
+  & :last-child {
+    width: 55%;
+  }
+`;
+
+const InputDate = styled(InputRow)`
+  & :first-child {
+    width: 45%;
+  }
+  & :last-child {
+    width: 45%;
+  }
+`;
 
 export default RentalProcess;

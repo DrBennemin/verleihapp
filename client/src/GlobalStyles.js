@@ -20,7 +20,6 @@ const GlobalCSS = () => {
         html {
         }
         body,
-        body div,
         h1,
         h2,
         h3,
@@ -30,9 +29,11 @@ const GlobalCSS = () => {
         p {
           margin: 0;
           padding: 0;
-          background-color: #f6f6f6;
           overflow: auto;
           font-size: 1rem;
+        }
+        body {
+          background-color: #f6f6f6;
         }
         label {
           display: block;
