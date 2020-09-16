@@ -1,13 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 import Add from "../assets/plus.svg";
 
 function footer() {
   return (
     <Footer>
-      <Button href="#">
-        <img src={Add} alt="plus" />
-      </Button>
+      <Link to="/rental-process">
+        <Button type="button">
+          <img src={Add} alt="plus" />
+        </Button>
+      </Link>
     </Footer>
   );
 }
@@ -27,6 +30,7 @@ const Button = styled.button`
   border: 10px solid #f6f6f6;
   margin-bottom: 35px;
   margin-top: -35px;
+  cursor: pointer;
 `;
 
 export default footer;
