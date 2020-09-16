@@ -19,15 +19,51 @@ const GlobalCSS = () => {
         }
         html {
         }
-        body {
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
           margin: 0;
-          background-color: #f6f6f6;
+          padding: 0;
           overflow: auto;
           font-size: 1rem;
         }
-
-        h1 {
-          margin: 0;
+        body {
+          background-color: #f6f6f6;
+        }
+        label {
+          display: block;
+          font-size: 0.8rem;
+        }
+        input {
+          display: block;
+          min-width: 100%;
+          padding: 10px;
+          border-radius: 50px;
+          border: none;
+          background-color: #fff;
+          margin: 10px 0;
+        }
+        input:focus {
+          outline: none;
+        }
+        ::placeholder {
+          color: #9d9d9c;
+        }
+        select {
+          min-width: 100%;
+          padding: 10px;
+          border-radius: 50px;
+          border: none;
+          background-color: #fff;
+          margin: 10px 0;
+        }
+        select:focus {
+          outline: none;
         }
         code {
         }
