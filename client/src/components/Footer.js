@@ -3,11 +3,18 @@ import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 import Rent from "../assets/rent.svg";
 import BottomBar from "../assets/bottom-bar.svg";
+import BottomBarAvailable from "../assets/bottom-bar-available.svg";
+import BottomBarNotAvailable from "../assets/bottom-bar-not-available.svg";
+import BottomBarRented from "../assets/bottom-bar-rented.svg";
+import BottomBarSearch from "../assets/bottom-bar-search.svg";
 
 function footer() {
   return (
     <Footer>
-      <FooterLeft>content</FooterLeft>
+      <FooterLeft>
+        <img src={BottomBarAvailable} alt="bottom-bar-available" />
+        <img src={BottomBarRented} alt="bottom-bar-rented" />
+      </FooterLeft>
       <FooterMiddle>
         <Link to="/new/rent">
           <Button type="button">
@@ -15,7 +22,10 @@ function footer() {
           </Button>
         </Link>
       </FooterMiddle>
-      <FooterRight>content</FooterRight>
+      <FooterRight>
+        <img src={BottomBarNotAvailable} alt="bottom-bar-not-available" />
+        <img src={BottomBarSearch} alt="bottom-bar-search" />
+      </FooterRight>
     </Footer>
   );
 }
@@ -31,6 +41,8 @@ const Footer = styled.footer`
 `;
 
 const FooterLeft = styled.div`
+  display: flex;
+  justify-content: space-around;
   flex-grow: 1;
   background-color: #28beb4;
   height: 72px;
@@ -45,6 +57,8 @@ const FooterMiddle = styled.div`
   }
 `;
 const FooterRight = styled.div`
+  display: flex;
+  justify-content: space-around;
   background-color: #28beb4;
   height: 72px;
   flex-grow: 1;
