@@ -19,6 +19,12 @@ const Footer = styled.footer`
   display: flex;
   justify-content: center;
   background-color: #28beb4;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
 `;
 
 const Button = styled.button`
