@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import ItemPreview from "../assets/item-preview.png";
-import ItemStatusAvailable from "../assets/download.svg";
+import ItemStatusAvailable from "../assets/available.svg";
 import ItemStatusNotAvailable from "../assets/not-available.svg";
 import ItemStatusRented from "../assets/rented.svg";
 
@@ -31,8 +31,8 @@ const Details = styled.div`
 `;
 
 const Status = styled.img`
-  min-width: 15px;
-  min-height: 15px;
+  width: 25px;
+  height: 18px;
   padding-right: 10px;
 `;
 
