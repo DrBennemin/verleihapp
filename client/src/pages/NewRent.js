@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-function RentalProcess() {
+function NewRent() {
   return (
     <Form>
       <label>
@@ -47,6 +47,26 @@ function RentalProcess() {
           <input placeholder="Ort" />
         </label>
       </InputCity>
+      <InputPerson>
+        <label>
+          Geburtsdatum
+          <input placeholder="TT.MM.JJJJ" />
+        </label>
+        <label>
+          Ausweisnummer
+          <input placeholder="Ausweisnummer" />
+        </label>
+      </InputPerson>
+
+      <label>
+        Krankenkasse
+        <input placeholder="Krankenkasse" required />
+      </label>
+      <label>
+        Versichertennummer
+        <input placeholder="Versichertennummer" required />
+      </label>
+
       <label>
         Artikel
         <select required>
@@ -116,4 +136,13 @@ const InputDate = styled(InputRow)`
   }
 `;
 
-export default RentalProcess;
+const InputPerson = styled(InputRow)`
+  & :first-child {
+    width: 35%;
+  }
+  & :last-child {
+    width: 55%;
+  }
+`;
+
+export default NewRent;
