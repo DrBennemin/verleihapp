@@ -27,7 +27,7 @@ function App() {
             <Route path="/article-detail">
               <ArticleDetail />
             </Route>
-            <Route path="/rental-process">
+            <Route path="/new/rent">
               <RentalProcess />
             </Route>
             <Route path="/">
