@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import MainImage from "../assets/philips-avent-pump.png";
-import ItemStatusAvailable from "../assets/download.svg";
+import ItemStatusAvailable from "../assets/available.svg";
 
 const Slider = styled.div`
   display: flex;
