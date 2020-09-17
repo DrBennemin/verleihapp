@@ -6,7 +6,7 @@ import Add from "../assets/plus.svg";
 function footer() {
   return (
     <Footer>
-      <Link to="/rental-process">
+      <Link to="/new/rent">
         <Button type="button">
           <img src={Add} alt="plus" />
         </Button>
