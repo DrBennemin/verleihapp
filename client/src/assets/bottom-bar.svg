@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="375px" height="72px" viewBox="0 0 375 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Group 3</title>
-    <defs>
-        <path d="M218.276,9.356 C213.086,21.494 201.037,30 187,30 L187,30 C172.963,30 160.913,21.494 155.724,9.356 L155.724,9.356 C153.326,3.749 147.952,0 141.855,0 L141.855,0 L0,0.001 L0,72.001 L375,72.001 L375,0.001 L232.145,0 C226.047,0 220.673,3.749 218.276,9.356 L218.276,9.356 Z" id="path-1"></path>
-    </defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group-3">
-            <mask id="mask-2" fill="white">
-                <use xlink:href="#path-1"></use>
-            </mask>
-            <g id="Clip-2"></g>
-            <polygon id="Fill-1" fill="#28BEB4" mask="url(#mask-2)" points="-5 77 380 77 380 -5.001 -5 -5.001"></polygon>
-        </g>
+<svg width="91px" height="72px" viewBox="0 0 91 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>path-1</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M45.145,30 C31.108,30 19.058,21.494 13.869,9.356 C11.471,3.749 6.097,0 0,0 L0.145,0.001 L0.145,72.001 L90.145,72.001 L90.145,0.001 L90.29,0 C84.192,0 78.818,3.749 76.421,9.356 C71.231,21.494 59.182,30 45.145,30 Z" id="path-1" fill="#28BEB4" fill-rule="nonzero"></path>
     </g>
 </svg>
