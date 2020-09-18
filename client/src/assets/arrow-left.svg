@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="21px" viewBox="0 0 12 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Arrow</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artikel---Detailansicht" transform="translate(-18.000000, -49.000000)" fill="#28BEB4" fill-rule="nonzero">
+            <path d="M21.6213203,59.5 L29.5606602,51.5606602 C30.1464466,50.9748737 30.1464466,50.0251263 29.5606602,49.4393398 C28.9748737,48.8535534 28.0251263,48.8535534 27.4393398,49.4393398 L18.4393398,58.4393398 C17.8535534,59.0251263 17.8535534,59.9748737 18.4393398,60.5606602 L27.4393398,69.5606602 C28.0251263,70.1464466 28.9748737,70.1464466 29.5606602,69.5606602 C30.1464466,68.9748737 30.1464466,68.0251263 29.5606602,67.4393398 L21.6213203,59.5 Z" id="Arrow"></path>
+        </g>
+    </g>
+</svg>
