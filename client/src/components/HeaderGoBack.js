@@ -3,31 +3,34 @@ import { Link, useHistory } from "react-router-dom";
 import styled from "@emotion/styled";
 import ArrowLeft from "../assets/arrow-left.svg";
 
-function headerGoBack() {
+function HeaderGoBack() {
   const history = useHistory();
 
   return (
-    <HeaderGoBack>
+    <HeaderGoBackContainer>
       <BackButton>
         <Link onClick={() => history.goBack()}>
           <img src={ArrowLeft} alt="go-back-button" />
         </Link>
       </BackButton>
       <Title>Verleih-app</Title>
-    </HeaderGoBack>
+    </HeaderGoBackContainer>
   );
 }
 
-const HeaderGoBack = styled.header`
-  display: grid;
-  grid-template: 4em 1fr / 4em 1fr 4em;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100vw;
+const HeaderGoBackContainer = styled.header`
+  display: flex;
+  width: 100%;
+  padding: 46px 0 13px 0;
+  flex-direction: row;
+  background-color: #fcfcfc;
+  justify-content: space-around;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   & > h1 {
     font-size: 1em;
     text-transform: uppercase;
+    display: flex;
+    justify-content: center;
   }
 `;
 
@@ -35,20 +38,15 @@ const BackButton = styled.nav`
   padding: 0.7em 0.2em;
   display: flex;
   margin: 0 1em;
-  justify-content: space-between;
-  & > a {
-    display: flex;
-    padding: 0.7em;
-  }
   & > a > img {
     height: 1em;
   }
 `;
 
 const Title = styled.h1`
+  display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
 `;
 
-export default headerGoBack;
+export default HeaderGoBack;
