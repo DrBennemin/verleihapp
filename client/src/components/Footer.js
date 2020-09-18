@@ -37,7 +37,7 @@ const Footer = styled.footer`
   width: 100%;
   bottom: 0;
   left: 0;
-  height: 72px;
+  height: 67px;
 `;
 
 const FooterLeft = styled.div`
@@ -45,7 +45,7 @@ const FooterLeft = styled.div`
   justify-content: space-around;
   flex-grow: 1;
   background-color: #28beb4;
-  height: 72px;
+  height: 67px;
 `;
 const FooterMiddle = styled.div`
   display: flex;
@@ -58,9 +58,10 @@ const FooterMiddle = styled.div`
 `;
 const FooterRight = styled.div`
   display: flex;
+  border: 2px solid #28beb4;
   justify-content: space-around;
   background-color: #28beb4;
-  height: 72px;
+  height: 67px;
   flex-grow: 1;
 `;
 
