@@ -1,6 +1,5 @@
 import React from "react";
 import GlobalStyles from "./GlobalStyles";
-import Header from "./components/Header";
 import List from "./pages/List";
 import ArticleDetail from "./pages/ArticleDetail";
 import NewRent from "./pages/NewRent";
@@ -12,7 +11,6 @@ function App() {
     <>
       <GlobalStyles />
       <Router>
-        <Header title={"Verleih-app"} />
         <main>
           <Switch>
             <Route path="/article-detail">

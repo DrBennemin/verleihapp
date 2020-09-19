@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "@emotion/styled";
+import Header from "../components/HeaderGoBack";
 
 function NewRent() {
   return (
     <>
+      <Header title={"Neue Vermietung"} />
       <Form>
         <label>
           Anrede
@@ -99,6 +101,7 @@ function NewRent() {
 const Form = styled.form`
   display: flex;
   flex-direction: column;
+  padding-top: 20px;
   label {
     display: flex;
     flex-direction: column;

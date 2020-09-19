@@ -2,24 +2,25 @@ import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import styled from "@emotion/styled";
 import ArrowLeft from "../assets/arrow-left.svg";
+import Search from "../assets/search.svg";
 
-function HeaderGoBack() {
+function HeaderGoBack({ title }) {
   const history = useHistory();
 
   return (
-    <HeaderGoBackContainer>
-      <BackButton>
-        <Link onClick={() => history.goBack()}>
-          <img src={ArrowLeft} alt="go-back-button" />
-        </Link>
-      </BackButton>
-      <Title>Verleih-app</Title>
-    </HeaderGoBackContainer>
+    <Container>
+      <Link onClick={() => history.goBack()}>
+        <img src={ArrowLeft} alt="go-back-button" />
+      </Link>
+      <Title>{title}</Title>
+      <img src={Search} alt="search-icon" />
+    </Container>
   );
 }
 
-const HeaderGoBackContainer = styled.header`
+const Container = styled.header`
   display: flex;
+  position: fixed;
   width: 100%;
   padding: 46px 0 13px 0;
   flex-direction: row;
@@ -29,17 +30,6 @@ const HeaderGoBackContainer = styled.header`
   & > h1 {
     font-size: 1em;
     text-transform: uppercase;
-    display: flex;
-    justify-content: center;
-  }
-`;
-
-const BackButton = styled.nav`
-  padding: 0.7em 0.2em;
-  display: flex;
-  margin: 0 1em;
-  & > a > img {
-    height: 1em;
   }
 `;
 
