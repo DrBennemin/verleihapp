@@ -40,7 +40,6 @@ const GlobalCSS = () => {
           flex-direction: column;
           align-items: center;
           flex-grow: 1;
-          padding: 10px 0 80px 0;
         }
         label {
           display: block;

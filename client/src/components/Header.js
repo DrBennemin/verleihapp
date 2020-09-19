@@ -7,7 +7,7 @@ function Header({ title }) {
   return (
     <Container>
       <img src={Menu} alt="menu-icon" />
-      <h1>{title}</h1>
+      <Title>{title}</Title>
       <img src={Search} alt="search-icon" />
     </Container>
   );
@@ -27,6 +27,12 @@ const Container = styled.header`
     font-size: 1em;
     text-transform: uppercase;
   }
+`;
+
+const Title = styled.h1`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export default Header;
