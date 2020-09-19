@@ -51,6 +51,7 @@ const FooterMiddle = styled.div`
   display: flex;
   background-image: url(${BottomBar});
   width: 90.29px;
+  margin: 0 -1px;
   & a {
     margin: 0 auto;
     margin-top: -30px;

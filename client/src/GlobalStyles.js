@@ -35,6 +35,13 @@ const GlobalCSS = () => {
         body {
           background-color: #f6f6f6;
         }
+        main {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          flex-grow: 1;
+          padding: 10px 0 80px 0;
+        }
         label {
           display: block;
           font-size: 0.8rem;
