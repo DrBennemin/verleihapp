@@ -1,11 +1,9 @@
 import React from "react";
 import styled from "@emotion/styled";
-import HeaderGoBack from "../components/HeaderGoBack";
 
 function NewRent() {
   return (
     <>
-      <HeaderGoBack />
       <Form>
         <label>
           Anrede
@@ -27,8 +25,8 @@ function NewRent() {
           <input placeholder="E-Mail" />
         </label>
         <label>
-          Telefonnummer
-          <input placeholder="Telefonnummer" />
+          Geburtsdatum
+          <input placeholder="TT.MM.JJJJ" type="date" />
         </label>
         <InputStreet>
           <label>

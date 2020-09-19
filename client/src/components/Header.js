@@ -3,8 +3,20 @@ import styled from "@emotion/styled";
 import Menu from "../assets/menu.svg";
 import Search from "../assets/search.svg";
 
-const Header = styled.header`
+function Header({ title }) {
+  return (
+    <Container>
+      <img src={Menu} alt="menu-icon" />
+      <h1>{title}</h1>
+      <img src={Search} alt="search-icon" />
+    </Container>
+  );
+}
+
+const Container = styled.header`
   display: flex;
+  position: fixed;
+  width: 100%;
   padding: 46px 0 13px 0;
   flex-direction: row;
   place-items: center;
@@ -17,14 +29,4 @@ const Header = styled.header`
   }
 `;
 
-function header() {
-  return (
-    <Header>
-      <img src={Menu} alt="menu-icon" />
-      <h1>Verleih-app</h1>
-      <img src={Search} alt="search-icon" />
-    </Header>
-  );
-}
-
-export default header;
+export default Header;
