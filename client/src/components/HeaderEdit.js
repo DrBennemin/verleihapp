@@ -2,21 +2,25 @@ import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
+import EditSrc from "../assets/edit.svg";
 import ArrowLeft from "../assets/arrow-left.svg";
 
-HeaderGoBack.propTypes = {
+HeaderEdit.propTypes = {
   title: PropTypes.string,
 };
 
-function HeaderGoBack({ title }) {
+function HeaderEdit({ title }) {
   const history = useHistory();
 
   return (
     <Container>
       <Link onClick={() => history.goBack()}>
-        <img src={ArrowLeft} alt="go-back-button" />
+        <img src={ArrowLeft} alt="close-button" />
       </Link>
       <Title>{title}</Title>
+      <Link to="/edit/article">
+        <img src={EditSrc} alt="edit-button" />
+      </Link>
     </Container>
   );
 }
@@ -37,6 +41,10 @@ const Container = styled.header`
     justify-self: center;
     align-self: center;
   }
+  & :last-child {
+    justify-self: center;
+    align-self: center;
+  }
 `;
 
 const Title = styled.h1`
@@ -45,4 +53,4 @@ const Title = styled.h1`
   justify-content: center;
 `;
 
-export default HeaderGoBack;
+export default HeaderEdit;

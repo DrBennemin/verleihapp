@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
 import styled from "@emotion/styled";
-import Close from "../assets/close.svg";
+import CloseSrc from "../assets/close.svg";
 
 HeaderClose.propTypes = {
   title: PropTypes.string,
@@ -14,7 +14,7 @@ function HeaderClose({ title }) {
   return (
     <Container>
       <Link onClick={() => history.goBack()}>
-        <img src={Close} alt="close-button" />
+        <img src={CloseSrc} alt="close-button" />
       </Link>
       <Title>{title}</Title>
     </Container>
@@ -23,7 +23,7 @@ function HeaderClose({ title }) {
 
 const Container = styled.header`
   display: grid;
-  grid-template: 80px 1fr / 120px 1fr 120px;
+  grid-template: 5em 1fr / 7.5em 1fr 7.5em;
   position: fixed;
   width: 100vw;
   background-color: #fcfcfc;
