@@ -1,6 +1,11 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Header from "../components/HeaderGoBack";
+import MenuAvailable from "../assets/menu-available.svg";
+import MenuNotAvailable from "../assets/menu-not-available.svg";
+import MenuRented from "../assets/menu-rented.svg";
+import MenuDueDate from "../assets/menu-due-date.svg";
+import MenuNewArticle from "../assets/menu-new-article.svg";
 
 function MainMenu() {
   return (
@@ -8,11 +13,27 @@ function MainMenu() {
       <Header title={"Menü"} />
       <Container>
         <ul>
-          <li>Artikel auf Lager</li>
-          <li>Artikel verliehen</li>
-          <li>Artikel gesperrt</li>
-          <li>Rückgabe überfällig</li>
-          <li>Neuen Artikel anlegen</li>
+          <li>
+            <img src={MenuAvailable} alt="menu-avaiblable" />
+            Artikel auf Lager
+          </li>
+          <li>
+            <img src={MenuRented} alt="menu-rented" />
+            Artikel verliehen
+          </li>
+          <li>
+            <img src={MenuNotAvailable} alt="menu-not-avaiblable" />
+            Artikel gesperrt
+          </li>
+          <li>
+            <img src={MenuDueDate} alt="menu-due-date" />
+            Rückgabe überfällig
+          </li>
+          <hr />
+          <li>
+            <img src={MenuNewArticle} alt="menu-new-article" />
+            Neuen Artikel anlegen
+          </li>
         </ul>
       </Container>
     </>
@@ -32,7 +53,12 @@ const Container = styled.nav`
     padding: 0;
   }
   & ul > li {
+    display: flex;
+    align-items: center;
     padding: 20px 0;
+  }
+  & ul > li > img {
+    padding-right: 20px;
   }
 `;
 
