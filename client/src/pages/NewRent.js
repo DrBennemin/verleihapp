@@ -104,6 +104,7 @@ const Form = styled.form`
   padding-top: 20px;
   margin-bottom: 80px;
   margin-top: 80px;
+  width: 90%;
   label {
     display: flex;
     flex-direction: column;
