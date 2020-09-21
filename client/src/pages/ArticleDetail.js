@@ -2,6 +2,29 @@ import React from "react";
 import styled from "@emotion/styled";
 import MainImage from "../assets/philips-avent-pump.png";
 import ItemStatusAvailable from "../assets/available.svg";
+import HeaderEdit from "../components/HeaderEdit";
+
+function ArticleDetail() {
+  return (
+    <Container>
+      <HeaderEdit title={"Artikel-Details"} />
+      <Slider>
+        <Image src={MainImage} alt="milk-pump" />
+        <Image src={MainImage} alt="milk-pump" />
+      </Slider>
+      <Description>
+        <Status>
+          <StatusIcon src={ItemStatusAvailable} alt="status" />
+          <StatusText>Auf Lager</StatusText>
+        </Status>
+        <Header>Philips AVENT Komfort-Milchpumpe</Header>
+        <serialNo>8710103565840</serialNo>
+      </Description>
+    </Container>
+  );
+}
+
+const Container = styled.div``;
 
 const Slider = styled.div`
   display: flex;
@@ -15,7 +38,7 @@ const Image = styled.img`
   align-self: center;
 `;
 
-const Container = styled.div`
+const Description = styled.div`
   min-width: 90%;
 `;
 
@@ -40,24 +63,5 @@ const Header = styled.div`
   font-size: 1.2rem;
   padding-bottom: 14px;
 `;
-
-function ArticleDetail() {
-  return (
-    <>
-      <Slider>
-        <Image src={MainImage} alt="milk-pump" />
-        <Image src={MainImage} alt="milk-pump" />
-      </Slider>
-      <Container>
-        <Status>
-          <StatusIcon src={ItemStatusAvailable} alt="status" />
-          <StatusText>Auf Lager</StatusText>
-        </Status>
-        <Header>Philips AVENT Komfort-Milchpumpe</Header>
-        <serialNo>8710103565840</serialNo>
-      </Container>
-    </>
-  );
-}
 
 export default ArticleDetail;
