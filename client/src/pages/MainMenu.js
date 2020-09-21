@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
-import Header from "../components/HeaderGoBack";
+import Header from "../components/HeaderClose";
 import MenuAvailableSrc from "../assets/menu-available.svg";
 import MenuNotAvailableSrc from "../assets/menu-not-available.svg";
 import MenuRentedSrc from "../assets/menu-rented.svg";
