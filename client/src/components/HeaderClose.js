@@ -1,16 +1,21 @@
 import React from "react";
-import styled from "@emotion/styled";
-import Menu from "../assets/menu.svg";
+import { Link, useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
+import styled from "@emotion/styled";
+import Close from "../assets/close.svg";
 
-Header.propTypes = {
+HeaderClose.propTypes = {
   title: PropTypes.string,
 };
 
-function Header({ title }) {
+function HeaderClose({ title }) {
+  const history = useHistory();
+
   return (
     <Container>
-      <img src={Menu} alt="menu-icon" />
+      <Link onClick={() => history.goBack()}>
+        <img src={Close} alt="close-button" />
+      </Link>
       <Title>{title}</Title>
     </Container>
   );
@@ -22,6 +27,7 @@ const Container = styled.header`
   position: fixed;
   width: 100vw;
   background-color: #fcfcfc;
+  justify-content: space-around;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   & > h1 {
     font-size: 1em;
@@ -39,4 +45,4 @@ const Title = styled.h1`
   justify-content: center;
 `;
 
-export default Header;
+export default HeaderClose;

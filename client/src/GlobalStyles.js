@@ -29,11 +29,17 @@ const GlobalCSS = () => {
         p {
           margin: 0;
           padding: 0;
-          overflow: auto;
           font-size: 1rem;
         }
         body {
           background-color: #f6f6f6;
+        }
+        main {
+          overflow-x: hidden;
+          overflow-y: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
         label {
           display: block;
