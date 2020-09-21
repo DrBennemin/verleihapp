@@ -29,7 +29,7 @@ const GlobalCSS = () => {
         p {
           margin: 0;
           padding: 0;
-          overflow: auto;
+          overflow: none;
           font-size: 1rem;
         }
         body {
@@ -39,7 +39,6 @@ const GlobalCSS = () => {
           display: flex;
           flex-direction: column;
           align-items: center;
-          flex-grow: 1;
         }
         label {
           display: block;
