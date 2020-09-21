@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 import Header from "../components/HeaderGoBack";
 import MenuAvailable from "../assets/menu-available.svg";
@@ -31,8 +32,10 @@ function MainMenu() {
           </li>
           <hr />
           <li>
-            <img src={MenuNewArticle} alt="menu-new-article" />
-            Neuen Artikel anlegen
+            <Link to="/new/rent">
+              <img src={MenuNewArticle} alt="menu-new-article" />
+              Neuen Artikel anlegen
+            </Link>
           </li>
         </ul>
       </Container>
@@ -52,13 +55,24 @@ const Container = styled.nav`
     list-style-type: none;
     padding: 0;
   }
-  & ul > li {
+  & li {
     display: flex;
     align-items: center;
     padding: 20px 0;
   }
-  & ul > li > img {
+  & img {
+    display: inline;
     padding-right: 20px;
+  }
+  & a,
+  a:hover,
+  a:focus,
+  a:visited,
+  a:active {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
   }
 `;
 
