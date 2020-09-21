@@ -1,6 +1,11 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Menu from "../assets/menu.svg";
+import PropTypes from "prop-types";
+
+Header.propTypes = {
+  title: PropTypes.string,
+};
 
 function Header({ title }) {
   return (
