@@ -74,6 +74,7 @@ const Button = styled.button`
   cursor: pointer;
   width: 50px;
   height: 50px;
+  outline: none;
 `;
 
 export default footer;
