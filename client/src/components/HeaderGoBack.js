@@ -1,7 +1,12 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import styled from "@emotion/styled";
+import PropTypes from "prop-types";
 import ArrowLeft from "../assets/arrow-left.svg";
+
+HeaderGoBack.propTypes = {
+  title: PropTypes.string,
+};
 
 function HeaderGoBack({ title }) {
   const history = useHistory();
