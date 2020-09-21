@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 import Header from "../components/HeaderGoBack";
-import MenuAvailable from "../assets/menu-available.svg";
-import MenuNotAvailable from "../assets/menu-not-available.svg";
-import MenuRented from "../assets/menu-rented.svg";
-import MenuDueDate from "../assets/menu-due-date.svg";
-import MenuNewArticle from "../assets/menu-new-article.svg";
-import MenuNewRent from "../assets/menu-new-rent.svg";
+import MenuAvailableSrc from "../assets/menu-available.svg";
+import MenuNotAvailableSrc from "../assets/menu-not-available.svg";
+import MenuRentedSrc from "../assets/menu-rented.svg";
+import MenuDueDateSrc from "../assets/menu-due-date.svg";
+import MenuNewArticleSrc from "../assets/menu-new-article.svg";
+import MenuNewRentSrc from "../assets/menu-new-rent.svg";
 
 function MainMenu() {
   return (
@@ -16,29 +16,29 @@ function MainMenu() {
       <Container>
         <ul>
           <li>
-            <img src={MenuAvailable} alt="menu-avaiblable" />
+            <img src={MenuAvailableSrc} alt="menu-avaiblable" />
             Artikel auf Lager
           </li>
           <li>
-            <img src={MenuRented} alt="menu-rented" />
+            <img src={MenuRentedSrc} alt="menu-rented" />
             Artikel verliehen
           </li>
           <li>
-            <img src={MenuNotAvailable} alt="menu-not-avaiblable" />
+            <img src={MenuNotAvailableSrc} alt="menu-not-avaiblable" />
             Artikel gesperrt
           </li>
           <li>
-            <img src={MenuDueDate} alt="menu-due-date" />
+            <img src={MenuDueDateSrc} alt="menu-due-date" />
             Rückgabe überfällig
           </li>
           <hr />
           <li>
-            <img src={MenuNewArticle} alt="menu-new-article" />
+            <img src={MenuNewArticleSrc} alt="menu-new-article" />
             Neuen Artikel anlegen
           </li>
           <li>
             <Link to="/new/rent">
-              <img src={MenuNewRent} alt="menu-new-article" />
+              <img src={MenuNewRentSrc} alt="menu-new-article" />
               Artikel verleihen
             </Link>
           </li>
@@ -51,9 +51,9 @@ function MainMenu() {
 const Container = styled.nav`
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
-  margin-bottom: 80px;
-  margin-top: 80px;
+  padding-top: 1.4em;
+  margin-bottom: 4em;
+  margin-top: 4em;
   width: 90%;
   font-size: 1.2rem;
   & ul {
