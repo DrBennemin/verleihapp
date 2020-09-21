@@ -5,6 +5,7 @@ import ArticleDetail from "./pages/ArticleDetail";
 import NewRent from "./pages/NewRent";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import MainMenu from "./pages/MainMenu";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
             </Route>
             <Route path="/new/rent">
               <NewRent />
+            </Route>
+            <Route path="/menu">
+              <MainMenu />
             </Route>
             <Route path="/">
               <List />
