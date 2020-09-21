@@ -4,7 +4,7 @@ import Header from "../components/HeaderGoBack";
 
 function MainMenu() {
   return (
-    <div>
+    <>
       <Header title={"Menü"} />
       <Container>
         <ul>
@@ -15,12 +15,25 @@ function MainMenu() {
           <li>Neuen Artikel anlegen</li>
         </ul>
       </Container>
-    </div>
+    </>
   );
 }
 
 const Container = styled.nav`
-  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  margin-bottom: 80px;
+  margin-top: 80px;
+  width: 90%;
+  font-size: 1.2rem;
+  & ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  & ul > li {
+    padding: 20px 0;
+  }
 `;
 
 export default MainMenu;
