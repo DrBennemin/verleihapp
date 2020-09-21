@@ -7,6 +7,7 @@ import MenuNotAvailable from "../assets/menu-not-available.svg";
 import MenuRented from "../assets/menu-rented.svg";
 import MenuDueDate from "../assets/menu-due-date.svg";
 import MenuNewArticle from "../assets/menu-new-article.svg";
+import MenuNewRent from "../assets/menu-new-rent.svg";
 
 function MainMenu() {
   return (
@@ -32,9 +33,13 @@ function MainMenu() {
           </li>
           <hr />
           <li>
+            <img src={MenuNewArticle} alt="menu-new-article" />
+            Neuen Artikel anlegen
+          </li>
+          <li>
             <Link to="/new/rent">
-              <img src={MenuNewArticle} alt="menu-new-article" />
-              Neuen Artikel anlegen
+              <img src={MenuNewRent} alt="menu-new-article" />
+              Artikel verleihen
             </Link>
           </li>
         </ul>
@@ -63,6 +68,7 @@ const Container = styled.nav`
   & img {
     display: inline;
     padding-right: 20px;
+    max-height: 20px;
   }
   & a,
   a:hover,
