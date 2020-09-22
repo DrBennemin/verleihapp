@@ -55,6 +55,8 @@ const MoreButton = styled.button`
 
 const Options = styled.ul`
   position: fixed;
+  padding: 0;
+  margin: 0 0 0 -4em;
   background-color: white;
   color: black;
   border: 1px solid #ededed;
