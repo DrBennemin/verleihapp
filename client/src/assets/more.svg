@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="4px" height="17px" viewBox="0 0 4 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 3</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artikel---Bearbeiten" transform="translate(-354.000000, -51.000000)" fill="#9D9D9C">
+            <g id="Group-3" transform="translate(354.000000, 51.000000)">
+                <circle id="Oval" transform="translate(2.000000, 15.000000) rotate(90.000000) translate(-2.000000, -15.000000) " cx="2" cy="15" r="2"></circle>
+                <circle id="Oval" transform="translate(2.000000, 8.500000) rotate(90.000000) translate(-2.000000, -8.500000) " cx="2" cy="8.5" r="2"></circle>
+                <circle id="Oval" transform="translate(2.000000, 2.000000) rotate(90.000000) translate(-2.000000, -2.000000) " cx="2" cy="2" r="2"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

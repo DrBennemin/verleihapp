@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
-import EditSrc from "../assets/edit.svg";
+import MoreSrc from "../assets/more.svg";
 import ArrowLeft from "../assets/arrow-left.svg";
+import Header from "./Header";
 
 HeaderEdit.propTypes = {
   title: PropTypes.string,
@@ -11,46 +12,71 @@ HeaderEdit.propTypes = {
 
 function HeaderEdit({ title }) {
   const history = useHistory();
+  const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
-    <Container>
-      <Link onClick={() => history.goBack()}>
-        <img src={ArrowLeft} alt="arrow-left" />
-      </Link>
-      <Title>{title}</Title>
-      <Link to="/edit/article">
-        <img src={EditSrc} alt="edit-button" />
-      </Link>
-    </Container>
+    <Header
+      title={title}
+      left={
+        <Link onClick={() => history.goBack()}>
+          <img src={ArrowLeft} alt="arrow-left" />
+        </Link>
+      }
+      right={
+        <More>
+          <MoreButton onClick={() => setToggleMenu(!toggleMenu)}>
+            <img src={MoreSrc} alt="more-button" />
+          </MoreButton>
+          {toggleMenu && (
+            <Options>
+              <li>
+                <Link to="/edit/article">Bearbeiten</Link>
+              </li>
+
+              <li>Löschen</li>
+            </Options>
+          )}
+        </More>
+      }
+    />
   );
 }
 
-const Container = styled.header`
+const More = styled.div`
   display: grid;
-  grid-template: 5em 1fr / 7.5em 1fr 7.5em;
-  position: fixed;
-  width: 100vw;
-  background-color: #fcfcfc;
-  justify-content: space-around;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-  & > h1 {
-    font-size: 1em;
-    text-transform: uppercase;
-  }
-  & :first-child {
-    justify-self: center;
-    align-self: center;
-  }
-  & :last-child {
-    justify-self: center;
-    align-self: center;
-  }
+  justify-self: center;
+  align-self: center;
 `;
 
-const Title = styled.h1`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+const MoreButton = styled.button`
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+`;
+
+const Options = styled.ul`
+  position: fixed;
+  padding: 0;
+  margin: 2em 0 0 -6em;
+  background-color: white;
+  color: black;
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  list-style: none;
+  & li {
+    padding: 0.8em 0.8em;
+  }
+  & a,
+  a:hover,
+  a:focus,
+  a:visited,
+  a:active {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+  }
 `;
 
 export default HeaderEdit;
