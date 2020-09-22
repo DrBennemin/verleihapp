@@ -2,24 +2,24 @@ import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
-import EditSrc from "../assets/edit.svg";
-import ArrowLeft from "../assets/arrow-left.svg";
+import DeleteSrc from "../assets/delete.svg";
+import CloseSrc from "../assets/close.svg";
 
-HeaderEdit.propTypes = {
+HeaderDelete.propTypes = {
   title: PropTypes.string,
 };
 
-function HeaderEdit({ title }) {
+function HeaderDelete({ title }) {
   const history = useHistory();
 
   return (
     <Container>
       <Link onClick={() => history.goBack()}>
-        <img src={ArrowLeft} alt="arrow-left" />
+        <img src={CloseSrc} alt="close-button" />
       </Link>
       <Title>{title}</Title>
-      <Link to="/edit/article">
-        <img src={EditSrc} alt="edit-button" />
+      <Link to="/delete/article">
+        <img src={DeleteSrc} alt="delete-button" />
       </Link>
     </Container>
   );
@@ -53,4 +53,4 @@ const Title = styled.h1`
   justify-content: center;
 `;
 
-export default HeaderEdit;
+export default HeaderDelete;
