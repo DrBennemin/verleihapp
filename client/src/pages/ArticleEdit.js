@@ -4,12 +4,12 @@ import MainImage from "../assets/philips-avent-pump.png";
 import ItemStatusAvailableSrc from "../assets/available.svg";
 import ArrowDownSrc from "../assets/arrow-down.svg";
 import SaveSrc from "../assets/save.svg";
-import Header from "../components/HeaderDelete";
+import HeaderEdit from "../components/HeaderEdit";
 
 function ArticleEdit() {
   return (
     <>
-      <Header title={"Artikel bearbeiten"} />
+      <HeaderEdit title={"Artikel bearbeiten"} />
       <Container>
         <Slider>
           <img src={MainImage} alt="milk-pump" />

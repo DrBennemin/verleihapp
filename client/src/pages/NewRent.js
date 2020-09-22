@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "@emotion/styled";
-import Header from "../components/HeaderGoBack";
+import HeaderGoBack from "../components/HeaderGoBack";
 
 function NewRent() {
   return (
     <>
-      <Header title={"Neue Vermietung"} />
+      <HeaderGoBack title={"Neue Vermietung"} />
       <Form>
         <label>
           Anrede

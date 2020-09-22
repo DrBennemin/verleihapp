@@ -3,12 +3,12 @@ import styled from "@emotion/styled";
 import MainImage from "../assets/philips-avent-pump.png";
 import ItemStatusAvailableSrc from "../assets/available.svg";
 import ArrowDownSrc from "../assets/arrow-down.svg";
-import Header from "../components/HeaderEdit";
+import HeaderEdit from "../components/HeaderEdit";
 
 function ArticleDetail() {
   return (
     <>
-      <Header title={"Artikel-Details"} />
+      <HeaderEdit title={"Artikel-Details"} />
       <Container>
         <Slider>
           <img src={MainImage} alt="milk-pump" />
