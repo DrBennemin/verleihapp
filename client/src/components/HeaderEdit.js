@@ -52,6 +52,7 @@ const MoreButton = styled.button`
   background: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
 `;
 
 const Options = styled.ul`
