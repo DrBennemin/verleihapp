@@ -4,12 +4,12 @@ import MainImage from "../assets/philips-avent-pump.png";
 import ItemStatusAvailableSrc from "../assets/available.svg";
 import ArrowDownSrc from "../assets/arrow-down.svg";
 import SaveSrc from "../assets/save.svg";
-import HeaderEdit from "../components/HeaderEdit";
+import HeaderGoBack from "../components/HeaderGoBack";
 
 function ArticleEdit() {
   return (
     <>
-      <HeaderEdit title={"Artikel bearbeiten"} />
+      <HeaderGoBack title={"Artikel bearbeiten"} />
       <Container>
         <Slider>
           <img src={MainImage} alt="milk-pump" />
@@ -52,11 +52,11 @@ function ArticleEdit() {
               placeholder="Beschreibung"
             />
           </label>
-          <Submit>
-            <img src={SaveSrc} alt="save-button" />
-            <span>Speichern</span>
-          </Submit>
         </Description>
+        <Submit>
+          <img src={SaveSrc} alt="save-button" />
+          <span>Speichern</span>
+        </Submit>
       </Container>
     </>
   );
@@ -119,8 +119,10 @@ const Status = styled.button`
 
 const Submit = styled.button`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  text-transform: lowercase;
   align-items: center;
+  font-size: 0.8em;
   margin: 1.2em 0;
   padding: 0.8em 1em;
   background: #28beb4;

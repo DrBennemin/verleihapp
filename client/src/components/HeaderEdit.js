@@ -32,6 +32,7 @@ function HeaderEdit({ title }) {
               <li>
                 <Link to="/edit/article">Bearbeiten</Link>
               </li>
+
               <li>Löschen</li>
             </Options>
           )}
@@ -56,7 +57,7 @@ const MoreButton = styled.button`
 const Options = styled.ul`
   position: fixed;
   padding: 0;
-  margin: 0 0 0 -4em;
+  margin: 2em 0 0 -6em;
   background-color: white;
   color: black;
   border: 1px solid #ededed;
