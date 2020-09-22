@@ -23,7 +23,7 @@ function HeaderGoBack({ title }) {
 
 const Container = styled.header`
   display: grid;
-  grid-template: 80px 1fr / 120px 1fr 120px;
+  grid-template: 5em 1fr / 7.5em 1fr 7.5em;
   position: fixed;
   width: 100vw;
   background-color: #fcfcfc;

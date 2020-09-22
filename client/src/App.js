@@ -6,6 +6,7 @@ import NewRent from "./pages/NewRent";
 import Footer from "./components/Footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import MainMenu from "./pages/MainMenu";
+import ArticleEdit from "./pages/ArticleEdit";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
           <Switch>
             <Route path="/article-detail">
               <ArticleDetail />
+            </Route>
+            <Route path="/edit/article">
+              <ArticleEdit />
             </Route>
             <Route path="/new/rent">
               <NewRent />

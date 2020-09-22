@@ -1,9 +1,53 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
-import ItemPreview from "../assets/item-preview.png";
-import ItemStatusAvailable from "../assets/available.svg";
-import ItemStatusNotAvailable from "../assets/not-available.svg";
-import ItemStatusRented from "../assets/rented.svg";
+import ItemPreviewSrc from "../assets/item-preview.png";
+import ItemStatusAvailableSrc from "../assets/available.svg";
+import ItemStatusNotAvailableSrc from "../assets/not-available.svg";
+import ItemStatusRentedSrc from "../assets/rented.svg";
+
+function listItem() {
+  return (
+    <>
+      <ListItem>
+        <Link to="/article-detail">
+          <Preview src={ItemPreviewSrc} alt="item-preview" />
+          <Details>
+            <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
+            <SerialNo>
+              <Status src={ItemStatusAvailableSrc} alt="status" />
+              8710103565840
+            </SerialNo>
+          </Details>
+        </Link>
+      </ListItem>
+      <ListItem>
+        <Link to="/article-detail">
+          <Preview src={ItemPreviewSrc} alt="item-preview" />
+          <Details>
+            <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
+            <SerialNo>
+              <Status src={ItemStatusNotAvailableSrc} alt="status" />
+              8710103565840
+            </SerialNo>
+          </Details>
+        </Link>
+      </ListItem>
+      <ListItem>
+        <Link to="/article-detail">
+          <Preview src={ItemPreviewSrc} alt="item-preview" />
+          <Details>
+            <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
+            <SerialNo>
+              <Status src={ItemStatusRentedSrc} alt="status" />
+              8710103565840
+            </SerialNo>
+          </Details>
+        </Link>
+      </ListItem>
+    </>
+  );
+}
 
 const ListItem = styled.div`
   display: flex;
@@ -12,6 +56,17 @@ const ListItem = styled.div`
   padding: 10px;
   margin: 5px;
   border-radius: 50px;
+  & > a,
+  a:hover,
+  a:focus,
+  a:visited,
+  a:active {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+  }
 `;
 
 const Preview = styled.img`
@@ -38,92 +93,5 @@ const Status = styled.img`
 const SerialNo = styled.span`
   display: flex;
 `;
-
-function listItem() {
-  return (
-    <>
-      <ListItem>
-        <Preview src={ItemPreview} alt="item-preview" />
-        <Details>
-          <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
-          <SerialNo>
-            <Status src={ItemStatusAvailable} alt="status" />
-            8710103565840
-          </SerialNo>
-        </Details>
-      </ListItem>
-      <ListItem>
-        <Preview src={ItemPreview} alt="item-preview" />
-        <Details>
-          <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
-          <SerialNo>
-            <Status src={ItemStatusAvailable} alt="status" />
-            8710103565840
-          </SerialNo>
-        </Details>
-      </ListItem>
-      <ListItem>
-        <Preview src={ItemPreview} alt="item-preview" />
-        <Details>
-          <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
-          <SerialNo>
-            <Status src={ItemStatusAvailable} alt="status" />
-            8710103565840
-          </SerialNo>
-        </Details>
-      </ListItem>
-      <ListItem>
-        <Preview src={ItemPreview} alt="item-preview" />
-        <Details>
-          <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
-          <SerialNo>
-            <Status src={ItemStatusNotAvailable} alt="status" />
-            8710103565840
-          </SerialNo>
-        </Details>
-      </ListItem>
-      <ListItem>
-        <Preview src={ItemPreview} alt="item-preview" />
-        <Details>
-          <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
-          <SerialNo>
-            <Status src={ItemStatusNotAvailable} alt="status" />
-            8710103565840
-          </SerialNo>
-        </Details>
-      </ListItem>
-      <ListItem>
-        <Preview src={ItemPreview} alt="item-preview" />
-        <Details>
-          <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
-          <SerialNo>
-            <Status src={ItemStatusNotAvailable} alt="status" />
-            8710103565840
-          </SerialNo>
-        </Details>
-      </ListItem>
-      <ListItem>
-        <Preview src={ItemPreview} alt="item-preview" />
-        <Details>
-          <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
-          <SerialNo>
-            <Status src={ItemStatusRented} alt="status" />
-            8710103565840
-          </SerialNo>
-        </Details>
-      </ListItem>
-      <ListItem>
-        <Preview src={ItemPreview} alt="item-preview" />
-        <Details>
-          <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
-          <SerialNo>
-            <Status src={ItemStatusRented} alt="status" />
-            8710103565840
-          </SerialNo>
-        </Details>
-      </ListItem>
-    </>
-  );
-}
 
 export default listItem;

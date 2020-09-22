@@ -1,20 +1,22 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { Link } from "react-router-dom";
-import Menu from "../assets/menu.svg";
 import PropTypes from "prop-types";
 
 Header.propTypes = {
   title: PropTypes.string,
+  left: PropTypes.node,
+  right: PropTypes.node,
 };
 
-function Header({ title }) {
+function Header({ title, left, right }) {
   return (
     <Container>
-      <Link to="/menu">
+      {left}
+      {/* <Link to="/menu">
         <img src={Menu} alt="menu-icon" />
-      </Link>
+      </Link> */}
       <Title>{title}</Title>
+      {right}
     </Container>
   );
 }

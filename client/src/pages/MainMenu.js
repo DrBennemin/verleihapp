@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
-import Header from "../components/HeaderGoBack";
+import HeaderGoBack from "../components/HeaderGoBack";
 import MenuAvailableSrc from "../assets/menu-available.svg";
 import MenuNotAvailableSrc from "../assets/menu-not-available.svg";
 import MenuRentedSrc from "../assets/menu-rented.svg";
@@ -12,7 +12,7 @@ import MenuNewRentSrc from "../assets/menu-new-rent.svg";
 function MainMenu() {
   return (
     <>
-      <Header title={"Menü"} />
+      <HeaderGoBack title={"Menü"} />
       <Container>
         <ul>
           <li>
