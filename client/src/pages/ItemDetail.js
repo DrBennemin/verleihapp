@@ -5,7 +5,7 @@ import ItemStatusAvailableSrc from "../assets/available.svg";
 import ArrowDownSrc from "../assets/arrow-down.svg";
 import HeaderEdit from "../components/HeaderEdit";
 
-function ArticleDetail() {
+function ItemDetail() {
   return (
     <>
       <HeaderEdit title={"Artikel-Details"} />
@@ -94,4 +94,4 @@ const Status = styled.button`
   }
 `;
 
-export default ArticleDetail;
+export default ItemDetail;

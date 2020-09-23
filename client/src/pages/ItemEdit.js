@@ -6,7 +6,7 @@ import ArrowDownSrc from "../assets/arrow-down.svg";
 import SaveSrc from "../assets/save.svg";
 import HeaderGoBack from "../components/HeaderGoBack";
 
-function ArticleEdit() {
+function ItemEdit() {
   return (
     <>
       <HeaderGoBack title={"Artikel bearbeiten"} />
@@ -139,4 +139,4 @@ const Submit = styled.button`
   }
 `;
 
-export default ArticleEdit;
+export default ItemEdit;

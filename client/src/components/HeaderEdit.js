@@ -30,7 +30,7 @@ function HeaderEdit({ title }) {
           {toggleMenu && (
             <Options>
               <li>
-                <Link to="/edit/article">Bearbeiten</Link>
+                <Link to="/edit/item">Bearbeiten</Link>
               </li>
 
               <li>Löschen</li>

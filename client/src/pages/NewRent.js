@@ -73,14 +73,14 @@ function NewRent() {
         <label>
           Artikel
           <select required>
-            <option value="article1">Artikel 1</option>
-            <option value="article2">Artikel 2</option>
-            <option value="article3">Artikel 3</option>
-            <option value="article4">Artikel 4</option>
-            <option value="article5">Artikel 5</option>
-            <option value="article6">Artikel 6</option>
-            <option value="article7">Artikel 7</option>
-            <option value="article8">Artikel 8</option>
+            <option value="item1">Artikel 1</option>
+            <option value="item2">Artikel 2</option>
+            <option value="item3">Artikel 3</option>
+            <option value="item4">Artikel 4</option>
+            <option value="item5">Artikel 5</option>
+            <option value="item6">Artikel 6</option>
+            <option value="item7">Artikel 7</option>
+            <option value="item8">Artikel 8</option>
           </select>
         </label>
         <InputDate>

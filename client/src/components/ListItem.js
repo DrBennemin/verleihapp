@@ -10,7 +10,7 @@ function listItem() {
   return (
     <>
       <ListItem>
-        <Link to="/article-detail">
+        <Link to="/item-detail">
           <Preview src={ItemPreviewSrc} alt="item-preview" />
           <Details>
             <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
@@ -22,7 +22,7 @@ function listItem() {
         </Link>
       </ListItem>
       <ListItem>
-        <Link to="/article-detail">
+        <Link to="/item-detail">
           <Preview src={ItemPreviewSrc} alt="item-preview" />
           <Details>
             <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
@@ -34,7 +34,7 @@ function listItem() {
         </Link>
       </ListItem>
       <ListItem>
-        <Link to="/article-detail">
+        <Link to="/item-detail">
           <Preview src={ItemPreviewSrc} alt="item-preview" />
           <Details>
             <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
