@@ -26,10 +26,10 @@ function ListItem() {
   return (
     <Container>
       {items?.map((item) => (
-        <ListItem key={item.id}>
+        <div key={item.id}>
           <p>{item.headline}</p>
           <p>{item.state}</p>
-        </ListItem>
+        </div>
       ))}
     </Container>
   );
