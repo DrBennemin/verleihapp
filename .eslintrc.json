@@ -6,7 +6,12 @@
     "node": true,
     "jest": true
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "react-app"
+  ],
   "globals": { "Atomics": "readonly", "SharedArrayBuffer": "readonly" },
   "parserOptions": {
     "ecmaFeatures": { "jsx": true },

@@ -2,8 +2,8 @@
   "items": [
     {
       "id": "1",
-      "Headline": "Philips AVENT Komfort-Milchpumpe",
-      "State": "verliehen",
+      "headline": "Philips AVENT Komfort-Milchpumpe",
+      "state": "verliehen",
       "imgSrc": "../../milchpumpe.jpg",
       "Category": "Milchpumpe",
       "PZN": "8977765",

@@ -1,5 +1,5 @@
-import React from "react";
-// import { getItems } from "../api/items";
+import React, { useEffect, useState } from "react";
+import { getItems } from "../api/items";
 import styled from "@emotion/styled";
 // import { Link } from "react-router-dom";
 // import ItemPreviewSrc from "../assets/item-preview.png";
@@ -8,24 +8,29 @@ import styled from "@emotion/styled";
 // import ItemStatusRentedSrc from "../assets/rented.svg";
 
 function ListItem() {
-  // const [items, setItems] = useState(null);
+  const [items, setItems] = useState(null);
 
-  // useEffect(() => {
-  //   const fetchItems = async () => {
-  //     const items = await getItems();
-  //     setItems(items);
-  //   };
-  //   fetchItems();
-  // }, []);
+  useEffect(() => {
+    async function fetchItems() {
+      try {
+        const loadedItems = await getItems();
+        console.log(loadedItems);
+        setItems(loadedItems);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchItems();
+  }, []);
 
   return (
     <Container>
-      {/* {items?.map((item) => (
-        <ListItem>
-          <p key={item.id}>{item.title}</p>
-          <p>{item.status}</p>
+      {items?.map((item) => (
+        <ListItem key={item.id}>
+          <p>{item.headline}</p>
+          <p>{item.state}</p>
         </ListItem>
-      ))} */}
+      ))}
     </Container>
   );
 }

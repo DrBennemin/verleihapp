@@ -1,5 +1,5 @@
 export const getItems = async () => {
-  const response = await fetch("http://localhost:3001/api");
+  const response = await fetch("/api/items");
   if (!response.ok) {
     throw response;
   }
@@ -9,7 +9,7 @@ export const getItems = async () => {
 };
 
 export const postItem = async (item) => {
-  const response = await fetch("http://localhost:3001/api", {
+  const response = await fetch("/api/items", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
