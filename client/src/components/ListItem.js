@@ -1,55 +1,36 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { getItems } from "../api/items";
 import styled from "@emotion/styled";
-import ItemPreviewSrc from "../assets/item-preview.png";
-import ItemStatusAvailableSrc from "../assets/available.svg";
-import ItemStatusNotAvailableSrc from "../assets/not-available.svg";
-import ItemStatusRentedSrc from "../assets/rented.svg";
+// import { Link } from "react-router-dom";
+// import ItemPreviewSrc from "../assets/item-preview.png";
+// import ItemStatusAvailableSrc from "../assets/available.svg";
+// import ItemStatusNotAvailableSrc from "../assets/not-available.svg";
+// import ItemStatusRentedSrc from "../assets/rented.svg";
 
-function listItem() {
+function ListItem() {
+  // const [items, setItems] = useState(null);
+
+  // useEffect(() => {
+  //   const fetchItems = async () => {
+  //     const items = await getItems();
+  //     setItems(items);
+  //   };
+  //   fetchItems();
+  // }, []);
+
   return (
-    <>
-      <ListItem>
-        <Link to="/item-detail">
-          <Preview src={ItemPreviewSrc} alt="item-preview" />
-          <Details>
-            <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
-            <SerialNo>
-              <Status src={ItemStatusAvailableSrc} alt="status" />
-              8710103565840
-            </SerialNo>
-          </Details>
-        </Link>
-      </ListItem>
-      <ListItem>
-        <Link to="/item-detail">
-          <Preview src={ItemPreviewSrc} alt="item-preview" />
-          <Details>
-            <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
-            <SerialNo>
-              <Status src={ItemStatusNotAvailableSrc} alt="status" />
-              8710103565840
-            </SerialNo>
-          </Details>
-        </Link>
-      </ListItem>
-      <ListItem>
-        <Link to="/item-detail">
-          <Preview src={ItemPreviewSrc} alt="item-preview" />
-          <Details>
-            <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
-            <SerialNo>
-              <Status src={ItemStatusRentedSrc} alt="status" />
-              8710103565840
-            </SerialNo>
-          </Details>
-        </Link>
-      </ListItem>
-    </>
+    <Container>
+      {/* {items?.map((item) => (
+        <ListItem>
+          <p key={item.id}>{item.title}</p>
+          <p>{item.status}</p>
+        </ListItem>
+      ))} */}
+    </Container>
   );
 }
 
-const ListItem = styled.div`
+const Container = styled.div`
   display: flex;
   justify-content: center;
   background-color: white;
@@ -69,29 +50,29 @@ const ListItem = styled.div`
   }
 `;
 
-const Preview = styled.img`
-  max-width: 70px;
-  max-height: 70px;
-  align-self: center;
-`;
+// const Preview = styled.img`
+//   max-width: 70px;
+//   max-height: 70px;
+//   align-self: center;
+// `;
 
-const Titel = styled.div`
-  display: flex;
-  font-weight: bold;
-`;
+// const Titel = styled.div`
+//   display: flex;
+//   font-weight: bold;
+// `;
 
-const Details = styled.div`
-  padding: 0 10px;
-`;
+// const Details = styled.div`
+//   padding: 0 10px;
+// `;
 
-const Status = styled.img`
-  width: 25px;
-  height: 18px;
-  padding-right: 10px;
-`;
+// const Status = styled.img`
+//   width: 25px;
+//   height: 18px;
+//   padding-right: 10px;
+// `;
 
-const SerialNo = styled.span`
-  display: flex;
-`;
+// const SerialNo = styled.span`
+//   display: flex;
+// `;
 
-export default listItem;
+export default ListItem;
