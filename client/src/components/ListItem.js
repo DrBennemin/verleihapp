@@ -24,20 +24,24 @@ function ListItem() {
   }, []);
 
   return (
-    <Container>
+    <>
       {items?.map((item) => (
-        <div key={item.id}>
-          <p>{item.headline}</p>
-          <p>{item.state}</p>
-        </div>
+        <Container key={item.id}>
+          <ItemPreview src={item.imgSrc} />
+          <Details>
+            <Title>{item.headline}</Title>
+            <SerialNo>{item.serialno}</SerialNo>
+            <State>{item.state}</State>
+          </Details>
+        </Container>
       ))}
-    </Container>
+    </>
   );
 }
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: justify-start;
   background-color: white;
   padding: 10px;
   margin: 5px;
@@ -55,29 +59,30 @@ const Container = styled.div`
   }
 `;
 
-// const Preview = styled.img`
-//   max-width: 70px;
-//   max-height: 70px;
-//   align-self: center;
-// `;
+const ItemPreview = styled.img`
+  max-width: 70px;
+  max-height: 70px;
+  align-self: center;
+  border-radius: 50%;
+`;
 
-// const Titel = styled.div`
-//   display: flex;
-//   font-weight: bold;
-// `;
+const Title = styled.div`
+  display: flex;
+  font-weight: bold;
+`;
 
-// const Details = styled.div`
-//   padding: 0 10px;
-// `;
+const Details = styled.div`
+  padding: 0 10px;
+`;
 
-// const Status = styled.img`
-//   width: 25px;
-//   height: 18px;
-//   padding-right: 10px;
-// `;
+const State = styled.span`
+  width: 25px;
+  height: 18px;
+  padding-right: 10px;
+`;
 
-// const SerialNo = styled.span`
-//   display: flex;
-// `;
+const SerialNo = styled.span`
+  display: flex;
+`;
 
 export default ListItem;
