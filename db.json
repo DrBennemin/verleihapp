@@ -1,15 +1,211 @@
 {
   "items": [
     {
-      "id": "1",
+      "id": 1,
+      "headline": "OMRON Compact Kompressor-Inhalationsgerät",
+      "serialno": 10,
+      "state": "not-available",
+      "yoc": 2013,
+      "description": "odio in hac habitasse platea dictumst maecenas ut massa quis",
+      "imgSrc": "https://i.imgur.com/qH5v4Na.jpg"
+    },
+    {
+      "id": 2,
+      "headline": "OMRON Compact Kompressor-Inhalationsgerät",
+      "serialno": 11,
+      "state": "available",
+      "yoc": 2017,
+      "description": "arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse",
+      "imgSrc": "https://i.imgur.com/0WGVh7u.png"
+    },
+    {
+      "id": 3,
+      "headline": "Rollstuhl S-Eco 300",
+      "serialno": 13,
+      "state": "rented",
+      "yoc": 2015,
+      "description": "id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus",
+      "imgSrc": "https://i.imgur.com/0WGVh7u.png"
+    },
+    {
+      "id": 4,
       "headline": "Philips AVENT Komfort-Milchpumpe",
-      "state": "verliehen",
-      "imgSrc": "../../milchpumpe.jpg",
-      "Category": "Milchpumpe",
-      "PZN": "8977765",
-      "Description": "Von der Natur inspirierte Flasche, 125 ml, 1 Loch (0m+) + Fläschchen Natural 125 ml 0% BPA.",
-      "Manufacturer": "Phillips",
-      "YOC": "2019"
+      "serialno": 11,
+      "state": "not-available",
+      "yoc": 2016,
+      "description": "ut massa quis augue luctus tincidunt nulla mollis molestie lorem",
+      "imgSrc": "https://i.imgur.com/0WGVh7u.png"
+    },
+    {
+      "id": 5,
+      "headline": "Standard-Rollator Migo 2G",
+      "serialno": 15,
+      "state": "not-available",
+      "yoc": 2019,
+      "description": "lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque",
+      "imgSrc": "https://i.imgur.com/0WGVh7u.png"
+    },
+    {
+      "id": 6,
+      "headline": "Standard-Rollator Migo 2G",
+      "serialno": 12,
+      "state": "not-available",
+      "yoc": 2016,
+      "description": "primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel",
+      "imgSrc": "https://i.imgur.com/F2fy0C1.png"
+    },
+    {
+      "id": 7,
+      "headline": "Leichtgewicht Rollator Topro Troja Classic",
+      "serialno": 10,
+      "state": "available",
+      "yoc": 2018,
+      "description": "porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in",
+      "imgSrc": "https://i.imgur.com/c04nVCv.png"
+    },
+    {
+      "id": 8,
+      "headline": "Rollstuhl S-Eco 300",
+      "serialno": 13,
+      "state": "not-available",
+      "yoc": 2016,
+      "description": "hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum",
+      "imgSrc": "https://i.imgur.com/qH5v4Na.jpg"
+    },
+    {
+      "id": 9,
+      "headline": "Philips AVENT Komfort-Milchpumpe",
+      "serialno": 15,
+      "state": "available",
+      "yoc": 2017,
+      "description": "ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum",
+      "imgSrc": "https://i.imgur.com/F2fy0C1.png"
+    },
+    {
+      "id": 10,
+      "headline": "Philips AVENT Komfort-Milchpumpe",
+      "serialno": 10,
+      "state": "available",
+      "yoc": 2013,
+      "description": "eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula",
+      "imgSrc": "https://i.imgur.com/c04nVCv.png"
+    },
+    {
+      "id": 11,
+      "headline": "Standard-Rollator Migo 2G",
+      "serialno": 14,
+      "state": "available",
+      "yoc": 2013,
+      "description": "ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed",
+      "imgSrc": "https://i.imgur.com/0WGVh7u.png"
+    },
+    {
+      "id": 12,
+      "headline": "Rollstuhl S-Eco 300",
+      "serialno": 12,
+      "state": "available",
+      "yoc": 2020,
+      "description": "turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel",
+      "imgSrc": "https://i.imgur.com/c04nVCv.png"
+    },
+    {
+      "id": 13,
+      "headline": "OMRON Compact Kompressor-Inhalationsgerät",
+      "serialno": 10,
+      "state": "rented",
+      "yoc": 2015,
+      "description": "id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis",
+      "imgSrc": "https://i.imgur.com/qH5v4Na.jpg"
+    },
+    {
+      "id": 14,
+      "headline": "Rollstuhl S-Eco 300",
+      "serialno": 12,
+      "state": "rented",
+      "yoc": 2018,
+      "description": "pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat",
+      "imgSrc": "https://i.imgur.com/c04nVCv.png"
+    },
+    {
+      "id": 15,
+      "headline": "Standard-Rollator Migo 2G",
+      "serialno": 12,
+      "state": "not-available",
+      "yoc": 2019,
+      "description": "libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt",
+      "imgSrc": "https://i.imgur.com/0WGVh7u.png"
+    },
+    {
+      "id": 16,
+      "headline": "OMRON Compact Kompressor-Inhalationsgerät",
+      "serialno": 10,
+      "state": "rented",
+      "yoc": 2014,
+      "description": "egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu",
+      "imgSrc": "https://i.imgur.com/qH5v4Na.jpg"
+    },
+    {
+      "id": 17,
+      "headline": "Rollstuhl S-Eco 300",
+      "serialno": 11,
+      "state": "rented",
+      "yoc": 2013,
+      "description": "augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero",
+      "imgSrc": "https://i.imgur.com/0WGVh7u.png"
+    },
+    {
+      "id": 18,
+      "headline": "Standard-Rollator Migo 2G",
+      "serialno": 10,
+      "state": "not-available",
+      "yoc": 2020,
+      "description": "venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus",
+      "imgSrc": "https://i.imgur.com/qH5v4Na.jpg"
+    },
+    {
+      "id": 19,
+      "headline": "Rollstuhl S-Eco 300",
+      "serialno": 12,
+      "state": "not-available",
+      "yoc": 2019,
+      "description": "varius ut blandit non interdum in ante vestibulum ante ipsum primis",
+      "imgSrc": "https://i.imgur.com/c04nVCv.png"
+    },
+    {
+      "id": 20,
+      "headline": "OMRON Compact Kompressor-Inhalationsgerät",
+      "serialno": 11,
+      "state": "rented",
+      "yoc": 2017,
+      "description": "neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras",
+      "imgSrc": "https://i.imgur.com/F2fy0C1.png"
+    },
+    {
+      "id": 21,
+      "headline": "Rollstuhl S-Eco 300",
+      "serialno": 13,
+      "state": "rented",
+      "yoc": 2015,
+      "description": "dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque",
+      "imgSrc": "https://i.imgur.com/c04nVCv.png"
+    },
+    {
+      "id": 22,
+      "headline": "OMRON Compact Kompressor-Inhalationsgerät",
+      "serialno": 12,
+      "state": "not-available",
+      "yoc": 2015,
+      "description": "massa id nisl venenatis lacinia aenean sit amet justo morbi",
+      "imgSrc": "https://i.imgur.com/F2fy0C1.png"
+    },
+    {
+      "id": 23,
+      "headline": "Standard-Rollator Migo 2G",
+      "serialno": 11,
+      "state": "not-available",
+      "yoc": 2017,
+      "description": "amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit",
+      "imgSrc": "https://i.imgur.com/0WGVh7u.png"
     }
   ]
 }
