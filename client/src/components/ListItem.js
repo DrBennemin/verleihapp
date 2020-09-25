@@ -30,8 +30,10 @@ function ListItem() {
           <ItemPreview src={item.imgSrc} />
           <Details>
             <Title>{item.headline}</Title>
-            <SerialNo>{item.serialno}</SerialNo>
-            <State>{item.state}</State>
+            <ProductStatus>
+              <State src={`/img/${item.state}.svg`} alt={item.state} />
+              <SerialNo>{item.serialno}</SerialNo>
+            </ProductStatus>
           </Details>
         </Container>
       ))}
@@ -41,11 +43,15 @@ function ListItem() {
 
 const Container = styled.div`
   display: flex;
+  font-size: 14px;
   justify-content: justify-start;
   background-color: white;
   padding: 10px;
-  margin: 5px;
+  margin: 0.6em auto;
   border-radius: 50px;
+  @media only screen and (min-width: 768px) {
+    width: 40%;
+  }
   & > a,
   a:hover,
   a:focus,
@@ -60,29 +66,39 @@ const Container = styled.div`
 `;
 
 const ItemPreview = styled.img`
-  max-width: 70px;
-  max-height: 70px;
+  max-width: 40px;
+  max-height: 40px;
   align-self: center;
   border-radius: 50%;
 `;
 
-const Title = styled.div`
-  display: flex;
-  font-weight: bold;
-`;
-
 const Details = styled.div`
   padding: 0 10px;
-`;
-
-const State = styled.span`
-  width: 25px;
-  height: 18px;
-  padding-right: 10px;
-`;
-
-const SerialNo = styled.span`
   display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  overflow: hidden;
 `;
+
+const Title = styled.h1`
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
+const ProductStatus = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const State = styled.img`
+  width: 16px;
+  height: 16px;
+`;
+
+const SerialNo = styled.span``;
 
 export default ListItem;
