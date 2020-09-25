@@ -62,8 +62,8 @@ const Slider = styled.div`
   padding: 20px 0;
   margin: 0;
   & img {
-    min-width: 180px;
-    min-height: 180px;
+    max-width: 180px;
+    max-height: 180px;
     align-self: center;
   }
 `;
