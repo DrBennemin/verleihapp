@@ -4,7 +4,7 @@
       "id": 1,
       "headline": "Leichtgewicht Rollator Topro Troja Classic",
       "serialno": 789210,
-      "state": "not-available",
+      "state": "gesperrt",
       "yoc": 2019,
       "description": "orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est",
       "imgSrc": "https://i.imgur.com/0WGVh7u.png"
@@ -13,7 +13,7 @@
       "id": 2,
       "headline": "Leichtgewicht Rollator Topro Troja Classic",
       "serialno": 3131095,
-      "state": "not-available",
+      "state": "gesperrt",
       "yoc": 2015,
       "description": "est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat",
       "imgSrc": "https://i.imgur.com/0WGVh7u.png"
@@ -22,7 +22,7 @@
       "id": 3,
       "headline": "Rollstuhl S-Eco 300",
       "serialno": 1019505,
-      "state": "rented",
+      "state": "vermietet",
       "yoc": 2020,
       "description": "orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio",
       "imgSrc": "https://i.imgur.com/c04nVCv.png"
@@ -31,7 +31,7 @@
       "id": 4,
       "headline": "Standard-Rollator Migo 2G",
       "serialno": 9309539,
-      "state": "not-available",
+      "state": "gesperrt",
       "yoc": 2015,
       "description": "vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum",
       "imgSrc": "https://i.imgur.com/qH5v4Na.jpg"
@@ -40,7 +40,7 @@
       "id": 5,
       "headline": "Leichtgewicht Rollator Topro Troja Classic",
       "serialno": 6122882,
-      "state": "rented",
+      "state": "vermietet",
       "yoc": 2016,
       "description": "elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo",
       "imgSrc": "https://i.imgur.com/qH5v4Na.jpg"
@@ -49,7 +49,7 @@
       "id": 6,
       "headline": "Philips AVENT Komfort-Milchpumpe",
       "serialno": 1685716,
-      "state": "rented",
+      "state": "vermietet",
       "yoc": 2017,
       "description": "lectus vestibulum quam sapien varius ut blandit non interdum in",
       "imgSrc": "https://i.imgur.com/0WGVh7u.png"
@@ -58,7 +58,7 @@
       "id": 7,
       "headline": "Leichtgewicht Rollator Topro Troja Classic",
       "serialno": 4493022,
-      "state": "rented",
+      "state": "vermietet",
       "yoc": 2020,
       "description": "id turpis integer aliquet massa id lobortis convallis tortor risus dapibus",
       "imgSrc": "https://i.imgur.com/F2fy0C1.png"
@@ -67,7 +67,7 @@
       "id": 8,
       "headline": "Leichtgewicht Rollator Topro Troja Classic",
       "serialno": 2343142,
-      "state": "not-available",
+      "state": "gesperrt",
       "yoc": 2016,
       "description": "praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante",
       "imgSrc": "https://i.imgur.com/qH5v4Na.jpg"
@@ -76,7 +76,7 @@
       "id": 9,
       "headline": "Philips AVENT Komfort-Milchpumpe",
       "serialno": 3647166,
-      "state": "available",
+      "state": "verfügbar",
       "yoc": 2016,
       "description": "morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum",
       "imgSrc": "https://i.imgur.com/F2fy0C1.png"
@@ -85,7 +85,7 @@
       "id": 10,
       "headline": "Leichtgewicht Rollator Topro Troja Classic",
       "serialno": 8357057,
-      "state": "available",
+      "state": "verfügbar",
       "yoc": 2017,
       "description": "lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum",
       "imgSrc": "https://i.imgur.com/c04nVCv.png"
@@ -94,7 +94,7 @@
       "id": 11,
       "headline": "Rollstuhl S-Eco 300",
       "serialno": 5472844,
-      "state": "rented",
+      "state": "vermietet",
       "yoc": 2016,
       "description": "sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo",
       "imgSrc": "https://i.imgur.com/F2fy0C1.png"
@@ -103,7 +103,7 @@
       "id": 12,
       "headline": "Rollstuhl S-Eco 300",
       "serialno": 8172646,
-      "state": "available",
+      "state": "verfügbar",
       "yoc": 2014,
       "description": "etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit",
       "imgSrc": "https://i.imgur.com/0WGVh7u.png"
@@ -112,7 +112,7 @@
       "id": 13,
       "headline": "OMRON Compact Kompressor-Inhalationsgerät",
       "serialno": 3628087,
-      "state": "not-available",
+      "state": "gesperrt",
       "yoc": 2014,
       "description": "aenean auctor gravida sem praesent id massa id nisl venenatis",
       "imgSrc": "https://i.imgur.com/0WGVh7u.png"
@@ -121,7 +121,7 @@
       "id": 14,
       "headline": "Standard-Rollator Migo 2G",
       "serialno": 9795534,
-      "state": "rented",
+      "state": "vermietet",
       "yoc": 2017,
       "description": "at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra",
       "imgSrc": "https://i.imgur.com/qH5v4Na.jpg"
@@ -130,7 +130,7 @@
       "id": 15,
       "headline": "Philips AVENT Komfort-Milchpumpe",
       "serialno": 6382509,
-      "state": "not-available",
+      "state": "gesperrt",
       "yoc": 2020,
       "description": "eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum",
       "imgSrc": "https://i.imgur.com/c04nVCv.png"
@@ -139,7 +139,7 @@
       "id": 16,
       "headline": "Rollstuhl S-Eco 300",
       "serialno": 248156,
-      "state": "not-available",
+      "state": "gesperrt",
       "yoc": 2019,
       "description": "ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula",
       "imgSrc": "https://i.imgur.com/qH5v4Na.jpg"
@@ -148,7 +148,7 @@
       "id": 17,
       "headline": "Leichtgewicht Rollator Topro Troja Classic",
       "serialno": 9660898,
-      "state": "rented",
+      "state": "vermietet",
       "yoc": 2014,
       "description": "ligula vehicula consequat morbi a ipsum integer a nibh in",
       "imgSrc": "https://i.imgur.com/0WGVh7u.png"
@@ -157,7 +157,7 @@
       "id": 18,
       "headline": "Rollstuhl S-Eco 300",
       "serialno": 7040395,
-      "state": "not-available",
+      "state": "gesperrt",
       "yoc": 2015,
       "description": "vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae",
       "imgSrc": "https://i.imgur.com/c04nVCv.png"
@@ -166,7 +166,7 @@
       "id": 19,
       "headline": "Standard-Rollator Migo 2G",
       "serialno": 1189771,
-      "state": "rented",
+      "state": "vermietet",
       "yoc": 2017,
       "description": "amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor",
       "imgSrc": "https://i.imgur.com/0WGVh7u.png"
@@ -175,7 +175,7 @@
       "id": 20,
       "headline": "OMRON Compact Kompressor-Inhalationsgerät",
       "serialno": 3689561,
-      "state": "rented",
+      "state": "vermietet",
       "yoc": 2017,
       "description": "dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula",
       "imgSrc": "https://i.imgur.com/qH5v4Na.jpg"
@@ -184,7 +184,7 @@
       "id": 21,
       "headline": "Rollstuhl S-Eco 300",
       "serialno": 2430109,
-      "state": "not-available",
+      "state": "gesperrt",
       "yoc": 2013,
       "description": "sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam",
       "imgSrc": "https://i.imgur.com/qH5v4Na.jpg"
@@ -193,7 +193,7 @@
       "id": 22,
       "headline": "Standard-Rollator Migo 2G",
       "serialno": 519126,
-      "state": "not-available",
+      "state": "gesperrt",
       "yoc": 2017,
       "description": "congue risus semper porta volutpat quam pede lobortis ligula sit amet",
       "imgSrc": "https://i.imgur.com/c04nVCv.png"
@@ -202,7 +202,7 @@
       "id": 23,
       "headline": "Standard-Rollator Migo 2G",
       "serialno": 3887539,
-      "state": "rented",
+      "state": "vermietet",
       "yoc": 2019,
       "description": "lectus vestibulum quam sapien varius ut blandit non interdum in ante",
       "imgSrc": "https://i.imgur.com/0WGVh7u.png"

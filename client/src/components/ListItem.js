@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { getItems } from "../api/items";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
-// import { Link } from "react-router-dom";
-// import ItemPreviewSrc from "../assets/item-preview.png";
-// import ItemStatusAvailableSrc from "../assets/available.svg";
-// import ItemStatusNotAvailableSrc from "../assets/not-available.svg";
-// import ItemStatusRentedSrc from "../assets/rented.svg";
 
 function ListItem() {
+  const { id } = useParams();
   const [items, setItems] = useState(null);
 
   useEffect(() => {
     async function fetchItems() {
       try {
-        const loadedItems = await getItems();
+        const loadedItems = await getItems(id);
         console.log(loadedItems);
         setItems(loadedItems);
       } catch (error) {
@@ -21,21 +19,23 @@ function ListItem() {
       }
     }
     fetchItems();
-  }, []);
+  }, [id]);
 
   return (
     <>
       {items?.map((item) => (
-        <Container key={item.id}>
-          <ItemPreview src={item.imgSrc} />
-          <Details>
-            <Title>{item.headline}</Title>
-            <ProductStatus>
-              <State src={`/img/${item.state}.svg`} alt={item.state} />
-              <SerialNo>{item.serialno}</SerialNo>
-            </ProductStatus>
-          </Details>
-        </Container>
+        <Link to="/item/detail/:id" key={item.id} id={item.id}>
+          <Container href={`/item/detail/${item.id}`}>
+            <ItemPreview src={item.imgSrc} />
+            <Details>
+              <Title>{item.headline}</Title>
+              <ProductStatus>
+                <State src={`/img/${item.state}.svg`} alt={item.state} />
+                <SerialNo>{item.serialno}</SerialNo>
+              </ProductStatus>
+            </Details>
+          </Container>
+        </Link>
       ))}
     </>
   );
@@ -51,17 +51,6 @@ const Container = styled.div`
   border-radius: 50px;
   @media only screen and (min-width: 768px) {
     width: 40%;
-  }
-  & > a,
-  a:hover,
-  a:focus,
-  a:visited,
-  a:active {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
   }
 `;
 
@@ -97,6 +86,7 @@ const ProductStatus = styled.div`
 const State = styled.img`
   width: 16px;
   height: 16px;
+  margin-right: 1em;
 `;
 
 const SerialNo = styled.span``;

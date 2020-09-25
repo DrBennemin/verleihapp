@@ -1,40 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "@emotion/styled";
-import MainImage from "../assets/philips-avent-pump.png";
-import ItemStatusAvailableSrc from "../assets/available.svg";
+import { getItems } from "../api/items";
+import { useParams } from "react-router-dom";
 import ArrowDownSrc from "../assets/arrow-down.svg";
 import HeaderEdit from "../components/HeaderEdit";
 
 function ItemDetail() {
+  const { serialno } = useParams();
+  const [items, setItems] = useState(null);
+
+  useEffect(() => {
+    async function fetchItems() {
+      try {
+        const loadedItems = await getItems(serialno);
+        console.log(loadedItems);
+        setItems(loadedItems);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchItems();
+  }, [serialno]);
+
   return (
     <>
       <HeaderEdit title={"Artikel-Details"} />
-      <Container>
-        <Slider>
-          <img src={MainImage} alt="milk-pump" />
-          <img src={MainImage} alt="milk-pump" />
-        </Slider>
-        <Description>
-          <Status>
-            <img src={ItemStatusAvailableSrc} alt="status" />
-            <span>Auf Lager</span>
-            <img src={ArrowDownSrc} alt="status" />
-          </Status>
-          <h1>Philips AVENT Komfort-Milchpumpe</h1>
-          <p>8710103565840</p>
-          <p>PZN 88878998</p>
-          <p>Baujahr 2019</p>
-          <p>
-            Von der Natur inspirierte Flasche, 125 ml, 1 Loch (0m+) + Fläschchen
-            Natural 125 ml 0% BPA. Die Milchpumpe Avent hat Massagekissen. Die
-            Massagekissen regen den Milchfluss an und sorgen für ein angenehmes
-            Gefühl. Die Kissen passen an fast alle den Mütter, aber es ist auch
-            möglich größere Kissen zu kaufen. Die Milchpumpe enthält eine
-            Schaube aus Silikon und ein Fläschchen der natural Sammlung Avent
-            von 125 ml.
-          </p>
-        </Description>
-      </Container>
+      {items?.map((item) => (
+        <Container key={item.id}>
+          <Slider>
+            <img src={item.imgSrc} alt="milk-pump" />
+          </Slider>
+          <Description>
+            <Status>
+              <img src={`/img/${item.state}.svg`} alt={item.state} />
+              <span>{item.state}</span>
+              <img src={ArrowDownSrc} alt="status" />
+            </Status>
+            <h1>{item.headline}</h1>
+            <p>{item.serialno}</p>
+            <p>{item.pzn}</p>
+            <p>{item.yoc}</p>
+            <p>{item.description}</p>
+          </Description>
+        </Container>
+      ))}
     </>
   );
 }

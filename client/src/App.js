@@ -4,7 +4,12 @@ import List from "./pages/List";
 import ItemDetail from "./pages/ItemDetail";
 import NewRent from "./pages/NewRent";
 import Footer from "./components/Footer";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import MainMenu from "./pages/MainMenu";
 import ItemEdit from "./pages/ItemEdit";
 
@@ -15,7 +20,7 @@ function App() {
       <Router>
         <main>
           <Switch>
-            <Route path="/item-detail">
+            <Route path="/item/detail/:id">
               <ItemDetail />
             </Route>
             <Route path="/edit/item">
@@ -27,8 +32,11 @@ function App() {
             <Route path="/menu">
               <MainMenu />
             </Route>
-            <Route path="/">
+            <Route path="/list">
               <List />
+            </Route>
+            <Route path="/">
+              <Redirect to="/list" />
             </Route>
           </Switch>
         </main>
