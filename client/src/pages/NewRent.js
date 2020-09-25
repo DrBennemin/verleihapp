@@ -1,98 +1,224 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
 import HeaderGoBack from "../components/HeaderGoBack";
 
 function NewRent() {
+  const [clientData, setClientData] = useState({
+    anrede: "",
+    vorname: "",
+    nachname: "",
+    email: "",
+    strasse: "",
+    nr: "",
+    plz: "",
+    ort: "",
+    geburtsdatum: "",
+    ausweisnummer: "",
+    krankenkasse: "",
+    versichertennummer: "",
+    artikel: "",
+    datumVon: "",
+    datumBis: "",
+  });
+
+  function handleChange(event) {
+    const value = event.target.value;
+    setClientData({ ...clientData, [event.target.name]: value });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(clientData);
+  }
+
   return (
     <>
       <HeaderGoBack title={"Neue Vermietung"} />
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <label>
           Anrede
-          <select required>
+          <select
+            value={clientData.anrede}
+            name="anrede"
+            onChange={handleChange}
+            required
+          >
             <option value="Herr">Herr</option>
             <option value="Frau">Frau</option>
           </select>
         </label>
         <label>
           Vorname
-          <input placeholder="Vorname" required />
+          <input
+            placeholder="Vorname"
+            value={clientData.vorname}
+            name="vorname"
+            onChange={handleChange}
+            required
+          />
         </label>
         <label>
           Nachname
-          <input placeholder="Nachname" />
+          <input
+            placeholder="Nachname"
+            value={clientData.nachname}
+            name="nachname"
+            onChange={handleChange}
+            required
+          />
         </label>
         <label>
           E-Mail
-          <input placeholder="E-Mail" />
+          <input
+            placeholder="E-Mail"
+            value={clientData.email}
+            name="email"
+            onChange={handleChange}
+            required
+          />
         </label>
-        <label>
-          Geburtsdatum
-          <input placeholder="TT.MM.JJJJ" type="date" />
-        </label>
+
         <InputStreet>
           <label>
             Straße
-            <input placeholder="Straße" />
+            <input
+              placeholder="Straße"
+              value={clientData.strasse}
+              name="strasse"
+              onChange={handleChange}
+              required
+            />
           </label>
           <label>
             Nr.
-            <input placeholder="Nr." />
+            <input
+              placeholder="Nr."
+              value={clientData.nr}
+              name="nr"
+              onChange={handleChange}
+              required
+            />
           </label>
         </InputStreet>
         <InputCity>
           <label>
             PLZ
-            <input placeholder="PLZ" />
+            <input
+              placeholder="PLZ"
+              value={clientData.plz}
+              name="plz"
+              onChange={handleChange}
+              required
+            />
           </label>
           <label>
             Ort
-            <input placeholder="Ort" />
+            <input
+              placeholder="Ort"
+              value={clientData.ort}
+              name="ort"
+              onChange={handleChange}
+              required
+            />
           </label>
         </InputCity>
         <InputPerson>
           <label>
             Geburtsdatum
-            <input placeholder="TT.MM.JJJJ" />
+            <input
+              placeholder="TT.MM.JJJJ"
+              type="date"
+              value={clientData.geburtsdatum}
+              name="geburtsdatum"
+              onChange={handleChange}
+              required
+            />
           </label>
           <label>
             Ausweisnummer
-            <input placeholder="Ausweisnummer" />
+            <input
+              placeholder="Ausweisnummer"
+              value={clientData.ausweisnummer}
+              name="ausweisnummer"
+              onChange={handleChange}
+              required
+            />
           </label>
         </InputPerson>
 
         <label>
           Krankenkasse
-          <input placeholder="Krankenkasse" required />
+          <input
+            placeholder="Krankenkasse"
+            value={clientData.krankenkasse}
+            name="krankenkasse"
+            onChange={handleChange}
+            required
+          />
         </label>
         <label>
           Versichertennummer
-          <input placeholder="Versichertennummer" required />
+          <input
+            placeholder="Versichertennummer"
+            value={clientData.versichertennummer}
+            name="versichertennummer"
+            onChange={handleChange}
+            required
+          />
         </label>
 
         <label>
           Artikel
-          <select required>
-            <option value="item1">Artikel 1</option>
-            <option value="item2">Artikel 2</option>
-            <option value="item3">Artikel 3</option>
-            <option value="item4">Artikel 4</option>
-            <option value="item5">Artikel 5</option>
-            <option value="item6">Artikel 6</option>
-            <option value="item7">Artikel 7</option>
-            <option value="item8">Artikel 8</option>
+          <select onChange={handleChange} required>
+            <option name="artikel" value={clientData.artikel}>
+              Artikel 1
+            </option>
+            <option name="artikel" value={clientData.artikel}>
+              Artikel 2
+            </option>
+            <option name="artikel" value={clientData.artikel}>
+              Artikel 3
+            </option>
+            <option name="artikel" value={clientData.artikel}>
+              Artikel 4
+            </option>
+            <option name="artikel" value={clientData.artikel}>
+              Artikel 5
+            </option>
+            <option name="artikel" value={clientData.artikel}>
+              Artikel 6
+            </option>
+            <option name="artikel" value={clientData.artikel}>
+              Artikel 7
+            </option>
+            <option name="artikel" value={clientData.artikel}>
+              Artikel 8
+            </option>
           </select>
         </label>
         <InputDate>
           <label>
             Datum von
-            <input type="date" required />
+            <input
+              type="date"
+              value={clientData.datumVon}
+              name="datumVon"
+              onChange={handleChange}
+              required
+            />
           </label>
           <label>
             Datum bis
-            <input type="date" required />
+            <input
+              type="date"
+              value={clientData.datumBis}
+              name="datumBis"
+              onChange={handleChange}
+              required
+            />
           </label>
         </InputDate>
+        <input type="submit" value="schick weg den scheiss" />
       </Form>
     </>
   );

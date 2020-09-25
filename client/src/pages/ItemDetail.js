@@ -1,49 +1,49 @@
 import React, { useEffect, useState } from "react";
 import styled from "@emotion/styled";
-import { getItems } from "../api/items";
+import { getItem } from "../api/items";
 import { useParams } from "react-router-dom";
 import ArrowDownSrc from "../assets/arrow-down.svg";
 import HeaderEdit from "../components/HeaderEdit";
 
 function ItemDetail() {
-  const { serialno } = useParams();
-  const [items, setItems] = useState(null);
+  const { id } = useParams();
+  const [item, setItem] = useState("");
 
   useEffect(() => {
-    async function fetchItems() {
+    async function fetchItem() {
       try {
-        const loadedItems = await getItems(serialno);
-        console.log(loadedItems);
-        setItems(loadedItems);
+        const loadedItem = await getItem(id);
+        console.log(loadedItem);
+        setItem(loadedItem);
       } catch (error) {
         console.log(error);
       }
     }
-    fetchItems();
-  }, [serialno]);
+    fetchItem();
+  }, [id]);
+
+  console.log(item);
 
   return (
     <>
       <HeaderEdit title={"Artikel-Details"} />
-      {items?.map((item) => (
-        <Container key={item.id}>
-          <Slider>
-            <img src={item.imgSrc} alt="milk-pump" />
-          </Slider>
-          <Description>
-            <Status>
-              <img src={`/img/${item.state}.svg`} alt={item.state} />
-              <span>{item.state}</span>
-              <img src={ArrowDownSrc} alt="status" />
-            </Status>
-            <h1>{item.headline}</h1>
-            <p>{item.serialno}</p>
-            <p>{item.pzn}</p>
-            <p>{item.yoc}</p>
-            <p>{item.description}</p>
-          </Description>
-        </Container>
-      ))}
+      <Container key={item.id}>
+        <Slider>
+          <img src={item.imgSrc} alt="milk-pump" />
+        </Slider>
+        <Description>
+          <Status>
+            <img src={`/img/${item.state}.svg`} alt={item.state} />
+            <span>{item.state}</span>
+            <img src={ArrowDownSrc} alt="status" />
+          </Status>
+          <h1>{item.headline}</h1>
+          <p>{item.serialno}</p>
+          <p>{item.pzn}</p>
+          <p>{item.yoc}</p>
+          <p>{item.description}</p>
+        </Description>
+      </Container>
     </>
   );
 }

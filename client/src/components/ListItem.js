@@ -24,7 +24,7 @@ function ListItem() {
   return (
     <>
       {items?.map((item) => (
-        <Link to="/item/detail/:id" key={item.id} id={item.id}>
+        <Link to={`/item/detail/${item.id}`} key={item.id} id={item.id}>
           <Container href={`/item/detail/${item.id}`}>
             <ItemPreview src={item.imgSrc} />
             <Details>
