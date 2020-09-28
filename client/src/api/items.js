@@ -3,7 +3,6 @@ export const getItems = async () => {
   if (!response.ok) {
     throw response;
   }
-
   const result = await response.json();
   return result;
 };
@@ -13,7 +12,6 @@ export const getItem = async (id) => {
   if (!response.ok) {
     throw response;
   }
-
   const result = await response.json();
   return result;
 };
@@ -29,7 +27,17 @@ export const postItem = async (item) => {
   if (!response.ok) {
     throw response;
   }
+  const result = await response.json();
+  return result;
+};
 
+export const deleteItem = async (id) => {
+  const response = await fetch(`/api/items/${id}`, {
+    method: "DELETE",
+  });
+  if (!response.ok) {
+    throw response;
+  }
   const result = await response.json();
   return result;
 };

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
 import MoreSrc from "../assets/more.svg";
 import ArrowLeft from "../assets/arrow-left.svg";
 import Header from "./Header";
+import { deleteItem } from "../api/items";
 
 HeaderEdit.propTypes = {
   title: PropTypes.string,
@@ -12,6 +13,7 @@ HeaderEdit.propTypes = {
 
 function HeaderEdit({ title }) {
   const history = useHistory();
+  const { id } = useParams();
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (
@@ -29,11 +31,18 @@ function HeaderEdit({ title }) {
           </MoreButton>
           {toggleMenu && (
             <Options>
-              <li>
-                <Link to="/edit/item">Bearbeiten</Link>
-              </li>
+              <Link to="/edit/item">
+                <li>Bearbeiten</li>
+              </Link>
 
-              <li>Löschen</li>
+              <button
+                onClick={() => {
+                  deleteItem(id);
+                  history.push("/");
+                }}
+              >
+                Löschen
+              </button>
             </Options>
           )}
         </More>
@@ -76,6 +85,12 @@ const Options = styled.ul`
     align-items: center;
     text-decoration: none;
     color: black;
+  }
+  & button {
+    background: transparent;
+    border: none;
+    font-size: 1em;
+    padding: 0.8em;
   }
 `;
 

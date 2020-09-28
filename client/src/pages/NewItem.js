@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import styled from "@emotion/styled";
 import UploadIconSrc from "../assets/file-upload.svg";
 import HeaderGoBack from "../components/HeaderGoBack";
+import { postItem } from "../api/items";
 
 function NewItem() {
   const [itemData, setItemData] = useState({
     imgSrc: "",
+    state: "",
     headline: "",
     pzn: "",
     sno: "",
@@ -19,15 +21,20 @@ function NewItem() {
     setItemData({ ...itemData, [event.target.name]: value });
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    console.log(itemData);
+    await postItem(itemData);
+  }
+
+  function clearForm() {
+    document.getElementById("newItem").reset();
+    alert("Succcccssssessss!! New Item created");
   }
 
   return (
     <>
       <HeaderGoBack title={"Artikel anlegen"} />
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit} id="newItem">
         <label>
           <ImageUploadContainer>
             <img src={UploadIconSrc} alt="upload-icon" />
@@ -37,10 +44,20 @@ function NewItem() {
               onChange={handleChange}
               name="imgSrc"
               hidden
-              required
             />
           </ImageUploadContainer>
         </label>
+        <select>
+          <option name="state" value={itemData.state}>
+            verfügbar
+          </option>
+          <option name="state" value={itemData.state}>
+            vermietet
+          </option>
+          <option name="state" value={itemData.state}>
+            gesperrt
+          </option>
+        </select>
         <label>
           Artikelbezeichnung
           <input
@@ -107,7 +124,7 @@ function NewItem() {
             required
           />
         </label>
-        <input type="submit" value="speichern" />
+        <Submit type="submit" value="speichern" onClick={clearForm} />
       </Form>
     </>
   );
@@ -148,6 +165,10 @@ const ImageUploadContainer = styled.div`
   & input {
     display: none;
   }
+`;
+
+const Submit = styled.input`
+  cursor: pointer;
 `;
 
 export default NewItem;

@@ -56,6 +56,7 @@ const GlobalCSS = () => {
         }
         button {
           outline: none;
+          font-family: lato;
         }
         label {
           display: block;
