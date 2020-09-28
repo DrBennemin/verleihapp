@@ -7,7 +7,7 @@ function NewItem() {
     imgSrc: "",
     headline: "",
     pzn: "",
-    snr: "",
+    sno: "",
     yoc: "",
     description: "",
     itemCondition: "",
@@ -28,6 +28,16 @@ function NewItem() {
       <HeaderGoBack title={"Artikel anlegen"} />
       <Form onSubmit={handleSubmit}>
         <label>
+          Foto
+          <input
+            type="file"
+            value={itemData.imgSrc}
+            name="imgSrc"
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <label>
           Artikelbezeichnung
           <input
             placeholder="Artikelbezeichnung"
@@ -37,6 +47,63 @@ function NewItem() {
             required
           />
         </label>
+        <label>
+          PZN
+          <input
+            placeholder="PZN"
+            value={itemData.pzn}
+            name="pzn"
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <label>
+          Seriennummmer
+          <input
+            placeholder="Seriennummer"
+            value={itemData.sno}
+            name="sno"
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <label>
+          Baujahr
+          <input
+            placeholder="Baujahr"
+            type="date"
+            format="yyyy"
+            min="1970"
+            max="2050"
+            value={itemData.yoc}
+            name="yoc"
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <label>
+          Beschreibung
+          <input
+            placeholder="Beschreibung"
+            value={itemData.description}
+            name="description"
+            onChange={handleChange}
+            required
+          />
+        </label>
+        <label>
+          Zustand
+          <input
+            type="range"
+            min="1"
+            max="10"
+            value={itemData.itemCondition}
+            onChange={handleChange}
+            name="itemCondition"
+            required
+          />
+        </label>
+        <input type="submit" value="speichern" />
       </Form>
     </>
   );

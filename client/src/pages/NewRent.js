@@ -218,7 +218,7 @@ function NewRent() {
             />
           </label>
         </InputDate>
-        <input type="submit" value="schick weg den scheiss" />
+        <input type="submit" value="speichern" />
       </Form>
     </>
   );
