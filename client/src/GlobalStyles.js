@@ -31,6 +31,17 @@ const GlobalCSS = () => {
           padding: 0;
           font-size: 1rem;
         }
+
+        a,
+        a:hover,
+        a:focus,
+        a:visited,
+        a:active {
+          align-items: center;
+          text-decoration: none;
+          color: black;
+          cursor: pointer;
+        }
         body {
           background-color: #f6f6f6;
         }
@@ -40,6 +51,9 @@ const GlobalCSS = () => {
           display: flex;
           flex-direction: column;
           align-items: center;
+        }
+        button {
+          outline: none;
         }
         label {
           display: block;

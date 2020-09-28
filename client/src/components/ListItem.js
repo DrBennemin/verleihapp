@@ -1,97 +1,94 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getItems } from "../api/items";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
-import ItemPreviewSrc from "../assets/item-preview.png";
-import ItemStatusAvailableSrc from "../assets/available.svg";
-import ItemStatusNotAvailableSrc from "../assets/not-available.svg";
-import ItemStatusRentedSrc from "../assets/rented.svg";
 
-function listItem() {
+function ListItem() {
+  const { id } = useParams();
+  const [items, setItems] = useState(null);
+
+  useEffect(() => {
+    async function fetchItems() {
+      try {
+        const loadedItems = await getItems(id);
+        console.log(loadedItems);
+        setItems(loadedItems);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchItems();
+  }, [id]);
+
   return (
     <>
-      <ListItem>
-        <Link to="/article-detail">
-          <Preview src={ItemPreviewSrc} alt="item-preview" />
-          <Details>
-            <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
-            <SerialNo>
-              <Status src={ItemStatusAvailableSrc} alt="status" />
-              8710103565840
-            </SerialNo>
-          </Details>
+      {items?.map((item) => (
+        <Link to={`/item/detail/${item.id}`} key={item.id} id={item.id}>
+          <Container href={`/item/detail/${item.id}`}>
+            <ItemPreview src={item.imgSrc} />
+            <Details>
+              <Title>{item.headline}</Title>
+              <ProductStatus>
+                <State src={`/img/${item.state}.svg`} alt={item.state} />
+                <SerialNo>{item.serialno}</SerialNo>
+              </ProductStatus>
+            </Details>
+          </Container>
         </Link>
-      </ListItem>
-      <ListItem>
-        <Link to="/article-detail">
-          <Preview src={ItemPreviewSrc} alt="item-preview" />
-          <Details>
-            <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
-            <SerialNo>
-              <Status src={ItemStatusNotAvailableSrc} alt="status" />
-              8710103565840
-            </SerialNo>
-          </Details>
-        </Link>
-      </ListItem>
-      <ListItem>
-        <Link to="/article-detail">
-          <Preview src={ItemPreviewSrc} alt="item-preview" />
-          <Details>
-            <Titel>Philips AVENT Komfort-Milchpumpe</Titel>
-            <SerialNo>
-              <Status src={ItemStatusRentedSrc} alt="status" />
-              8710103565840
-            </SerialNo>
-          </Details>
-        </Link>
-      </ListItem>
+      ))}
     </>
   );
 }
 
-const ListItem = styled.div`
+const Container = styled.div`
   display: flex;
-  justify-content: center;
+  font-size: 14px;
+  justify-content: justify-start;
   background-color: white;
   padding: 10px;
-  margin: 5px;
+  margin: 0.6em auto;
   border-radius: 50px;
-  & > a,
-  a:hover,
-  a:focus,
-  a:visited,
-  a:active {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
+  @media only screen and (min-width: 768px) {
+    width: 40%;
   }
 `;
 
-const Preview = styled.img`
-  max-width: 70px;
-  max-height: 70px;
+const ItemPreview = styled.img`
+  max-width: 40px;
+  max-height: 40px;
   align-self: center;
-`;
-
-const Titel = styled.div`
-  display: flex;
-  font-weight: bold;
+  border-radius: 50%;
 `;
 
 const Details = styled.div`
   padding: 0 10px;
-`;
-
-const Status = styled.img`
-  width: 25px;
-  height: 18px;
-  padding-right: 10px;
-`;
-
-const SerialNo = styled.span`
   display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  overflow: hidden;
 `;
 
-export default listItem;
+const Title = styled.h1`
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
+const ProductStatus = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const State = styled.img`
+  width: 16px;
+  height: 16px;
+  margin-right: 1em;
+`;
+
+const SerialNo = styled.span``;
+
+export default ListItem;

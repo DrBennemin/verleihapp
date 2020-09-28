@@ -1,12 +1,17 @@
 import React from "react";
 import GlobalStyles from "./GlobalStyles";
 import List from "./pages/List";
-import ArticleDetail from "./pages/ArticleDetail";
+import ItemDetail from "./pages/ItemDetail";
 import NewRent from "./pages/NewRent";
 import Footer from "./components/Footer";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import MainMenu from "./pages/MainMenu";
-import ArticleEdit from "./pages/ArticleEdit";
+import ItemEdit from "./pages/ItemEdit";
 
 function App() {
   return (
@@ -15,11 +20,11 @@ function App() {
       <Router>
         <main>
           <Switch>
-            <Route path="/article-detail">
-              <ArticleDetail />
+            <Route path="/item/detail/:id">
+              <ItemDetail />
             </Route>
-            <Route path="/edit/article">
-              <ArticleEdit />
+            <Route path="/edit/item">
+              <ItemEdit />
             </Route>
             <Route path="/new/rent">
               <NewRent />
@@ -27,8 +32,11 @@ function App() {
             <Route path="/menu">
               <MainMenu />
             </Route>
-            <Route path="/">
+            <Route path="/list">
               <List />
+            </Route>
+            <Route path="/">
+              <Redirect to="/list" />
             </Route>
           </Switch>
         </main>

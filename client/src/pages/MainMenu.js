@@ -6,7 +6,7 @@ import MenuAvailableSrc from "../assets/menu-available.svg";
 import MenuNotAvailableSrc from "../assets/menu-not-available.svg";
 import MenuRentedSrc from "../assets/menu-rented.svg";
 import MenuDueDateSrc from "../assets/menu-due-date.svg";
-import MenuNewArticleSrc from "../assets/menu-new-article.svg";
+import MenuNewItemSrc from "../assets/menu-new-item.svg";
 import MenuNewRentSrc from "../assets/menu-new-rent.svg";
 
 function MainMenu() {
@@ -33,12 +33,12 @@ function MainMenu() {
           </li>
           <hr />
           <li>
-            <img src={MenuNewArticleSrc} alt="menu-new-article" />
+            <img src={MenuNewItemSrc} alt="menu-new-item" />
             Neuen Artikel anlegen
           </li>
           <li>
             <Link to="/new/rent">
-              <img src={MenuNewRentSrc} alt="menu-new-article" />
+              <img src={MenuNewRentSrc} alt="menu-new-item" />
               Artikel verleihen
             </Link>
           </li>
