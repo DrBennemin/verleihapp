@@ -1,5 +1,7 @@
 import React from "react";
 import { Global, css } from "@emotion/core";
+import "./assets/file-upload.svg";
+
 const GlobalCSS = () => {
   return (
     <Global
@@ -85,6 +87,7 @@ const GlobalCSS = () => {
         select:focus {
           outline: none;
         }
+
         code {
         }
       `}

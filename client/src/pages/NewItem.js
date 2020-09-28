@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
+import UploadIconSrc from "../assets/file-upload.svg";
 import HeaderGoBack from "../components/HeaderGoBack";
 
 function NewItem() {
@@ -28,14 +29,17 @@ function NewItem() {
       <HeaderGoBack title={"Artikel anlegen"} />
       <Form onSubmit={handleSubmit}>
         <label>
-          Foto
-          <input
-            type="file"
-            value={itemData.imgSrc}
-            name="imgSrc"
-            onChange={handleChange}
-            required
-          />
+          <ImageUploadContainer>
+            <img src={UploadIconSrc} alt="upload-icon" />
+            <input
+              type="file"
+              value={itemData.imgSrc}
+              onChange={handleChange}
+              name="imgSrc"
+              hidden
+              required
+            />
+          </ImageUploadContainer>
         </label>
         <label>
           Artikelbezeichnung
@@ -119,6 +123,30 @@ const Form = styled.form`
   label {
     display: flex;
     flex-direction: column;
+  }
+`;
+
+const ImageUploadContainer = styled.div`
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  width: 100%;
+  border-radius: 50px;
+  background: #fff;
+  border: 1px dashed #dedede;
+  margin-bottom: 10px;
+  & img {
+    width: 50px;
+    align-self: center;
+  }
+  & label {
+    cursor: pointer;
+  }
+  & input {
+    display: none;
   }
 `;
 
