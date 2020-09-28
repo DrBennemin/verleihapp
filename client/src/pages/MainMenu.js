@@ -32,16 +32,18 @@ function MainMenu() {
             Rückgabe überfällig
           </li>
           <hr />
-          <li>
-            <img src={MenuNewItemSrc} alt="menu-new-item" />
-            Neuen Artikel anlegen
-          </li>
-          <li>
-            <Link to="/new/rent">
+          <Link to="/new/item">
+            <li>
+              <img src={MenuNewItemSrc} alt="menu-new-item" />
+              Neuen Artikel anlegen
+            </li>
+          </Link>
+          <Link to="/new/rent">
+            <li>
               <img src={MenuNewRentSrc} alt="menu-new-item" />
               Artikel verleihen
-            </Link>
-          </li>
+            </li>
+          </Link>
         </ul>
       </Container>
     </>

@@ -3,6 +3,7 @@ import GlobalStyles from "./GlobalStyles";
 import List from "./pages/List";
 import ItemDetail from "./pages/ItemDetail";
 import NewRent from "./pages/NewRent";
+import NewItem from "./pages/NewItem";
 import Footer from "./components/Footer";
 import {
   BrowserRouter as Router,
@@ -28,6 +29,9 @@ function App() {
             </Route>
             <Route path="/new/rent">
               <NewRent />
+            </Route>
+            <Route path="/new/item">
+              <NewItem />
             </Route>
             <Route path="/menu">
               <MainMenu />
