@@ -16,15 +16,15 @@ function MainMenu() {
       <Container>
         <ul>
           <li>
-            <img src={MenuAvailableSrc} alt="menu-avaiblable" />
+            <img src={MenuAvailableSrc} alt="verfuegbar" />
             Artikel auf Lager
           </li>
           <li>
-            <img src={MenuRentedSrc} alt="menu-rented" />
+            <img src={MenuRentedSrc} alt="vermietet" />
             Artikel verliehen
           </li>
           <li>
-            <img src={MenuNotAvailableSrc} alt="menu-not-avaiblable" />
+            <img src={MenuNotAvailableSrc} alt="gesperrt" />
             Artikel gesperrt
           </li>
           <li>
