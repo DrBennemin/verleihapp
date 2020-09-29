@@ -27,11 +27,14 @@ function ListItem() {
         <Link to={`/rent/detail/${rent.id}`} key={rent.id} id={rent.id}>
           <Container href={`/rent/detail/${rent.id}`}>
             <Details>
-              <Title>{rent.headline}</Title>
-              <RentStatus>
-                <State src={`/img/${rent.state}.svg`} alt={rent.state} />
-                <SerialNo>{rent.serialno}</SerialNo>
-              </RentStatus>
+              <Title>Client ID {rent.id}</Title>
+              <Title>
+                {rent.firstName} {rent.lastName}
+              </Title>
+              <Title>
+                {rent.dateFrom} - {rent.dateTo}
+              </Title>
+              <Title>Item ID {rent.item}</Title>
             </Details>
           </Container>
         </Link>

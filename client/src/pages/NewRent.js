@@ -12,10 +12,9 @@ function NewRent() {
     street: "",
     no: "",
     zip: "",
-    place: "",
+    city: "",
     birthdate: "",
     idno: "",
-    krankenkasse: "",
     insurance: "",
     insuranceId: "",
     item: "",
@@ -122,7 +121,7 @@ function NewRent() {
             Ort
             <input
               placeholder="Ort"
-              value={clientData.place}
+              value={clientData.city}
               name="place"
               onChange={handleChange}
               required
