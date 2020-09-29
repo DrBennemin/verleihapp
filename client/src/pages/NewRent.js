@@ -1,24 +1,26 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
 import HeaderGoBack from "../components/HeaderGoBack";
+import { postRent } from "../api/rentals";
 
 function NewRent() {
   const [clientData, setClientData] = useState({
-    anrede: "",
-    vorname: "",
-    nachname: "",
+    salutation: "",
+    firstName: "",
+    lastName: "",
     email: "",
-    strasse: "",
-    nr: "",
-    plz: "",
-    ort: "",
-    geburtsdatum: "",
-    ausweisnummer: "",
+    street: "",
+    no: "",
+    zip: "",
+    place: "",
+    birthdate: "",
+    idno: "",
     krankenkasse: "",
-    versichertennummer: "",
-    artikel: "",
-    datumVon: "",
-    datumBis: "",
+    insurance: "",
+    insuranceId: "",
+    item: "",
+    dateFrom: "",
+    dateTo: "",
   });
 
   function handleChange(event) {
@@ -26,20 +28,25 @@ function NewRent() {
     setClientData({ ...clientData, [event.target.name]: value });
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    console.log(clientData);
+    await postRent(clientData);
+  }
+
+  function clearForm() {
+    document.getElementById("newRent").reset();
+    alert("Succcccssssessss!! New Rent created");
   }
 
   return (
     <>
       <HeaderGoBack title={"Neue Vermietung"} />
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit} id="newRent">
         <label>
           Anrede
           <select
-            value={clientData.anrede}
-            name="anrede"
+            value={clientData.salutation}
+            name="salutation"
             onChange={handleChange}
             required
           >
@@ -51,8 +58,8 @@ function NewRent() {
           Vorname
           <input
             placeholder="Vorname"
-            value={clientData.vorname}
-            name="vorname"
+            value={clientData.firstName}
+            name="firstName"
             onChange={handleChange}
             required
           />
@@ -61,8 +68,8 @@ function NewRent() {
           Nachname
           <input
             placeholder="Nachname"
-            value={clientData.nachname}
-            name="nachname"
+            value={clientData.lastName}
+            name="lastName"
             onChange={handleChange}
             required
           />
@@ -83,8 +90,8 @@ function NewRent() {
             Straße
             <input
               placeholder="Straße"
-              value={clientData.strasse}
-              name="strasse"
+              value={clientData.street}
+              name="street"
               onChange={handleChange}
               required
             />
@@ -93,8 +100,8 @@ function NewRent() {
             Nr.
             <input
               placeholder="Nr."
-              value={clientData.nr}
-              name="nr"
+              value={clientData.no}
+              name="no"
               onChange={handleChange}
               required
             />
@@ -105,8 +112,8 @@ function NewRent() {
             PLZ
             <input
               placeholder="PLZ"
-              value={clientData.plz}
-              name="plz"
+              value={clientData.zip}
+              name="zip"
               onChange={handleChange}
               required
             />
@@ -115,8 +122,8 @@ function NewRent() {
             Ort
             <input
               placeholder="Ort"
-              value={clientData.ort}
-              name="ort"
+              value={clientData.place}
+              name="place"
               onChange={handleChange}
               required
             />
@@ -128,8 +135,8 @@ function NewRent() {
             <input
               placeholder="TT.MM.JJJJ"
               type="date"
-              value={clientData.geburtsdatum}
-              name="geburtsdatum"
+              value={clientData.birthdate}
+              name="birthdate"
               onChange={handleChange}
               required
             />
@@ -138,8 +145,8 @@ function NewRent() {
             Ausweisnummer
             <input
               placeholder="Ausweisnummer"
-              value={clientData.ausweisnummer}
-              name="ausweisnummer"
+              value={clientData.idno}
+              name="idno"
               onChange={handleChange}
               required
             />
@@ -150,8 +157,8 @@ function NewRent() {
           Krankenkasse
           <input
             placeholder="Krankenkasse"
-            value={clientData.krankenkasse}
-            name="krankenkasse"
+            value={clientData.insurance}
+            name="insurance"
             onChange={handleChange}
             required
           />
@@ -160,8 +167,8 @@ function NewRent() {
           Versichertennummer
           <input
             placeholder="Versichertennummer"
-            value={clientData.versichertennummer}
-            name="versichertennummer"
+            value={clientData.insuranceId}
+            name="insuranceId"
             onChange={handleChange}
             required
           />
@@ -170,29 +177,8 @@ function NewRent() {
         <label>
           Artikel
           <select onChange={handleChange} required>
-            <option name="artikel" value={clientData.artikel}>
+            <option name="item" value={clientData.item}>
               Artikel 1
-            </option>
-            <option name="artikel" value={clientData.artikel}>
-              Artikel 2
-            </option>
-            <option name="artikel" value={clientData.artikel}>
-              Artikel 3
-            </option>
-            <option name="artikel" value={clientData.artikel}>
-              Artikel 4
-            </option>
-            <option name="artikel" value={clientData.artikel}>
-              Artikel 5
-            </option>
-            <option name="artikel" value={clientData.artikel}>
-              Artikel 6
-            </option>
-            <option name="artikel" value={clientData.artikel}>
-              Artikel 7
-            </option>
-            <option name="artikel" value={clientData.artikel}>
-              Artikel 8
             </option>
           </select>
         </label>
@@ -201,8 +187,8 @@ function NewRent() {
             Datum von
             <input
               type="date"
-              value={clientData.datumVon}
-              name="datumVon"
+              value={clientData.dateFrom}
+              name="dateFrom"
               onChange={handleChange}
               required
             />
@@ -211,14 +197,14 @@ function NewRent() {
             Datum bis
             <input
               type="date"
-              value={clientData.datumBis}
-              name="datumBis"
+              value={clientData.dateTo}
+              name="dateTo"
               onChange={handleChange}
               required
             />
           </label>
         </InputDate>
-        <input type="submit" value="speichern" />
+        <Submit type="submit" value="speichern" onClick={clearForm} />
       </Form>
     </>
   );
@@ -277,6 +263,10 @@ const InputPerson = styled(InputRow)`
   & :last-child {
     width: 55%;
   }
+`;
+
+const Submit = styled.input`
+  cursor: pointer;
 `;
 
 export default NewRent;

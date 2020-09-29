@@ -207,5 +207,17 @@
       "description": "lectus vestibulum quam sapien varius ut blandit non interdum in ante",
       "imgSrc": "https://i.imgur.com/0WGVh7u.png"
     }
+  ],
+  "rent": [
+    {
+      "test": "test",
+      "id": 1
+    },
+    {
+      "anrede": "Herr",
+      "vorname": "Benjamin",
+      "nachname": "Krzis",
+      "id": 2
+    }
   ]
 }

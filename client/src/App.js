@@ -1,6 +1,7 @@
 import React from "react";
 import GlobalStyles from "./GlobalStyles";
 import List from "./pages/List";
+import Rentals from "./pages/Rentals";
 import ItemDetail from "./pages/ItemDetail";
 import NewRent from "./pages/NewRent";
 import NewItem from "./pages/NewItem";
@@ -38,6 +39,9 @@ function App() {
             </Route>
             <Route path="/list">
               <List />
+            </Route>
+            <Route path="/rent">
+              <Rentals />
             </Route>
             <Route path="/">
               <Redirect to="/list" />
