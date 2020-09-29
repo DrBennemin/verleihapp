@@ -27,11 +27,11 @@ function MainMenu() {
             <img src={MenuNotAvailableSrc} alt="gesperrt" />
             Artikel gesperrt
           </li>
+          <hr />
           <li>
             <img src={MenuDueDateSrc} alt="menu-due-date" />
             Rückgabe überfällig
           </li>
-          <hr />
           <Link to="/new/item">
             <li>
               <img src={MenuNewItemSrc} alt="menu-new-item" />
@@ -55,7 +55,7 @@ const Container = styled.nav`
   flex-direction: column;
   padding-top: 1.4em;
   margin-bottom: 4em;
-  margin-top: 4em;
+  margin-top: 2em;
   width: 90%;
   font-size: 1.2rem;
   & ul {
