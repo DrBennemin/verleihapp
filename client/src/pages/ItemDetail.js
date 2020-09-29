@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import { getItem } from "../api/items";
 import { useParams } from "react-router-dom";
-import ArrowDownSrc from "../assets/arrow-down.svg";
 import HeaderEdit from "../components/HeaderEdit";
+import ArrowDownSrc from "../assets/arrow-down.svg";
 
 function ItemDetail() {
   const { id } = useParams();
@@ -21,8 +21,6 @@ function ItemDetail() {
     }
     fetchItem();
   }, [id]);
-
-  console.log(item);
 
   return (
     <>

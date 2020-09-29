@@ -4,6 +4,7 @@ import List from "./pages/List";
 import Rentals from "./pages/Rentals";
 import ItemDetail from "./pages/ItemDetail";
 import NewRent from "./pages/NewRent";
+import RentDetail from "./pages/RentDetail";
 import NewItem from "./pages/NewItem";
 import Footer from "./components/Footer";
 import {
@@ -24,6 +25,9 @@ function App() {
           <Switch>
             <Route path="/item/detail/:id">
               <ItemDetail />
+            </Route>
+            <Route path="/rent/detail/:id">
+              <RentDetail />
             </Route>
             <Route path="/edit/item">
               <ItemEdit />
