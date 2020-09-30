@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
 import MainImage from "../assets/philips-avent-pump.png";
 import ItemStatusAvailableSrc from "../assets/available.svg";
 import ArrowDownSrc from "../assets/arrow-down.svg";
 import SaveSrc from "../assets/save.svg";
 import HeaderGoBack from "../components/HeaderGoBack";
+import { useHistory } from "react-router-dom";
+
+//states mit leeren string
+//loadingstate für fetch und update
+//const{useparams}
+//useeffect mit fetch => setName = new
+//handleChanges in den einzelnen inputs
+//setName.name.target.value
+//updatedItem
+//Zapppppmitten
+//history.push für rückweg
 
 function ItemEdit() {
+  const history = useHistory();
+  const [name, setName] = useState("");
+
   return (
     <>
       <HeaderGoBack title={"Artikel bearbeiten"} />

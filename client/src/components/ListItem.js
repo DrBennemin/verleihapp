@@ -28,10 +28,13 @@ function ListItem() {
           <Container href={`/item/detail/${item.id}`}>
             <ItemPreview src={item.imgSrc} />
             <Details>
-              <Title>{item.headline}</Title>
+              <Title>{item.title}</Title>
               <ProductStatus>
-                <State src={`/img/${item.state}.svg`} alt={item.state} />
-                <SerialNo>{item.serialno}</SerialNo>
+                <State
+                  src={`/img/${item.availability}.svg`}
+                  alt={item.availability}
+                />
+                <SerialNo>{item.sno}</SerialNo>
               </ProductStatus>
             </Details>
           </Container>

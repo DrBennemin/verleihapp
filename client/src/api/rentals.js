@@ -41,3 +41,12 @@ export const deleteRent = async (id) => {
   const result = await response.json();
   return result;
 };
+
+export const updateRent = async (id, content) => {
+  const response = await fetch(`/api/rent/${id}`, {
+    method: "PATCH",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(content),
+  });
+  return response.ok;
+};
