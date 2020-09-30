@@ -329,6 +329,18 @@
       "condition": 1,
       "imgSrc": "https://www.sanitaetshaus-24.de/images/stories/virtuemart/product/standard-rollator-migo-50-19.jpg",
       "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus."
+    },
+    {
+      "imgSrc": "",
+      "availability": "",
+      "title": "Leichtgewichtrollstuhl",
+      "pzn": "12345678",
+      "sno": "444555666999",
+      "yoc": "2011-06-30",
+      "description": "Ziemlich leichter Leichtgewichtrollstuhl ",
+      "condition": "",
+      "itemCondition": "4",
+      "id": 31
     }
   ],
   "rent": [

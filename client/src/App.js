@@ -29,7 +29,7 @@ function App() {
             <Route path="/rent/detail/:id">
               <RentDetail />
             </Route>
-            <Route path="/edit/item">
+            <Route path="/item/edit/:id">
               <ItemEdit />
             </Route>
             <Route path="/new/rent">

@@ -40,7 +40,9 @@ function ItemDetail() {
           </Status>
           <h1>{item.title}</h1>
           <p>Seriennummer: {item.sno}</p>
+          <p>PZN: {item.pzn}</p>
           <p>Baujahr: {item.yoc}</p>
+          <p>Zustand: {item.condition}</p>
           <p>Beschreibung: {item.description}</p>
         </Description>
       </Container>

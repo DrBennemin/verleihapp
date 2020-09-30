@@ -31,7 +31,7 @@ function HeaderEdit({ title }) {
           </MoreButton>
           {toggleMenu && (
             <Options>
-              <Link to="/edit/item">
+              <Link to={`/item/edit/${id}`}>
                 <li>Bearbeiten</li>
               </Link>
 
