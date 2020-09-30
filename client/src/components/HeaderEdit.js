@@ -18,7 +18,7 @@ function HeaderEdit({ title }) {
 
   return (
     <Header
-      title={title}
+      title={<Link to="/">{title}</Link>}
       left={
         <Link onClick={() => history.goBack()}>
           <img src={ArrowLeft} alt="arrow-left" />
