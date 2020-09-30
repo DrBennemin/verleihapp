@@ -7,6 +7,31 @@ export const getItems = async () => {
   return result;
 };
 
+export const getItemsAvailable = async () => {
+  const response = await fetch("/api/items?availability_like=lagernd");
+  if (!response.ok) {
+    throw response;
+  }
+  const result = await response.json();
+  return result;
+};
+export const getItemsNotAvailable = async () => {
+  const response = await fetch("/api/items?availability_like=gesperrt");
+  if (!response.ok) {
+    throw response;
+  }
+  const result = await response.json();
+  return result;
+};
+export const getItemsRent = async () => {
+  const response = await fetch("/api/items?availability_like=vermietet");
+  if (!response.ok) {
+    throw response;
+  }
+  const result = await response.json();
+  return result;
+};
+
 export const getItem = async (id) => {
   const response = await fetch(`/api/items/${id}`);
   if (!response.ok) {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getItems } from "../api/items";
+import { getItemsNotAvailable } from "../api/items";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
@@ -11,7 +11,7 @@ function ListItem() {
   useEffect(() => {
     async function fetchItems() {
       try {
-        const loadedItems = await getItems(id);
+        const loadedItems = await getItemsNotAvailable(id);
         console.log(loadedItems);
         setItems(loadedItems);
       } catch (error) {

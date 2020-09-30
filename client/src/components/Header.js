@@ -12,9 +12,6 @@ function Header({ title, left, right }) {
   return (
     <Container>
       {left}
-      {/* <Link to="/menu">
-        <img src={Menu} alt="menu-icon" />
-      </Link> */}
       <Title>{title}</Title>
       {right}
     </Container>

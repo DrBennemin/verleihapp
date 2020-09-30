@@ -12,8 +12,12 @@ function footer() {
   return (
     <Footer>
       <FooterLeft>
-        <img src={BottomBarAvailable} alt="bottom-bar-available" />
-        <img src={BottomBarRented} alt="bottom-bar-rented" />
+        <Link to="/list/available">
+          <img src={BottomBarAvailable} alt="bottom-bar-available" />
+        </Link>
+        <Link to="/list/rent">
+          <img src={BottomBarRented} alt="bottom-bar-rented" />
+        </Link>
       </FooterLeft>
       <FooterMiddle>
         <Link to="/new/rent">
@@ -23,7 +27,9 @@ function footer() {
         </Link>
       </FooterMiddle>
       <FooterRight>
-        <img src={BottomBarNotAvailable} alt="bottom-bar-not-available" />
+        <Link to="/list/notavailable">
+          <img src={BottomBarNotAvailable} alt="bottom-bar-not-available" />
+        </Link>
         <img src={BottomBarSearch} alt="bottom-bar-search" />
       </FooterRight>
     </Footer>
@@ -43,6 +49,7 @@ const Footer = styled.footer`
 const FooterLeft = styled.div`
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-grow: 1;
   background-color: #28beb4;
   height: 67px;
@@ -61,6 +68,7 @@ const FooterRight = styled.div`
   display: flex;
   border: 2px solid #28beb4;
   justify-content: space-around;
+  align-items: center;
   background-color: #28beb4;
   height: 67px;
   flex-grow: 1;

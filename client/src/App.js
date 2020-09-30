@@ -1,6 +1,9 @@
 import React from "react";
 import GlobalStyles from "./GlobalStyles";
 import List from "./pages/List";
+import ListAvailable from "./pages/ListAvailable";
+import ListNotAvailable from "./pages/ListNotAvailable";
+import ListRent from "./pages/ListRent";
 import Rentals from "./pages/Rentals";
 import ItemDetail from "./pages/ItemDetail";
 import NewRent from "./pages/NewRent";
@@ -41,13 +44,22 @@ function App() {
             <Route path="/menu">
               <MainMenu />
             </Route>
+            <Route path="/list/notavailable">
+              <ListNotAvailable />
+            </Route>
+            <Route path="/list/available">
+              <ListAvailable />
+            </Route>
+            <Route path="/list/rent">
+              <ListRent />
+            </Route>
             <Route path="/list">
               <List />
             </Route>
             <Route path="/rent">
               <Rentals />
             </Route>
-            <Route path="/">
+            <Route exact path="/">
               <Redirect to="/list" />
             </Route>
           </Switch>
