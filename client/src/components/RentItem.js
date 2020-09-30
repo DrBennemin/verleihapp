@@ -73,17 +73,17 @@ const Title = styled.h1`
   text-overflow: ellipsis;
 `;
 
-const RentStatus = styled.div`
-  display: flex;
-  align-items: center;
-`;
+// const RentStatus = styled.div`
+//   display: flex;
+//   align-items: center;
+// `;
 
-const State = styled.img`
-  width: 16px;
-  height: 16px;
-  margin-right: 1em;
-`;
+// const State = styled.img`
+//   width: 16px;
+//   height: 16px;
+//   margin-right: 1em;
+// `;
 
-const SerialNo = styled.span``;
+// const SerialNo = styled.span``;
 
 export default ListItem;

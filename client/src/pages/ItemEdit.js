@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 import ArrowDownSrc from "../assets/arrow-down.svg";
 import SaveSrc from "../assets/save.svg";
 import HeaderGoBack from "../components/HeaderGoBack";
-import { useHistory, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 //states mit leeren string
 //loadingstate für fetch und update
