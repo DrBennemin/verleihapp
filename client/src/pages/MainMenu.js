@@ -21,14 +21,20 @@ function MainMenu() {
               Artikel auf Lager
             </li>
           </Link>
-          <li>
-            <img src={MenuRentedSrc} alt="vermietet" />
-            Artikel verliehen
-          </li>
-          <li>
-            <img src={MenuNotAvailableSrc} alt="gesperrt" />
-            Artikel gesperrt
-          </li>
+
+          <Link to="/list/notavailable">
+            <li>
+              <img src={MenuNotAvailableSrc} alt="gesperrt" />
+              Artikel gesperrt
+            </li>
+          </Link>
+          <Link to="/list/rent">
+            <li>
+              <img src={MenuRentedSrc} alt="vermietet" />
+              Artikel verliehen
+            </li>
+          </Link>
+
           <hr />
           <li>
             <img src={MenuDueDateSrc} alt="menu-due-date" />
