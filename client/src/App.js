@@ -1,8 +1,10 @@
 import React from "react";
 import GlobalStyles from "./GlobalStyles";
 import List from "./pages/List";
+import Rentals from "./pages/Rentals";
 import ItemDetail from "./pages/ItemDetail";
 import NewRent from "./pages/NewRent";
+import RentDetail from "./pages/RentDetail";
 import NewItem from "./pages/NewItem";
 import Footer from "./components/Footer";
 import {
@@ -24,7 +26,10 @@ function App() {
             <Route path="/item/detail/:id">
               <ItemDetail />
             </Route>
-            <Route path="/edit/item">
+            <Route path="/rent/detail/:id">
+              <RentDetail />
+            </Route>
+            <Route path="/item/edit/:id">
               <ItemEdit />
             </Route>
             <Route path="/new/rent">
@@ -38,6 +43,9 @@ function App() {
             </Route>
             <Route path="/list">
               <List />
+            </Route>
+            <Route path="/rent">
+              <Rentals />
             </Route>
             <Route path="/">
               <Redirect to="/list" />

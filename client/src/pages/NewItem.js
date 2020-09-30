@@ -7,13 +7,13 @@ import { postItem } from "../api/items";
 function NewItem() {
   const [itemData, setItemData] = useState({
     imgSrc: "",
-    state: "",
-    headline: "",
+    availability: "",
+    title: "",
     pzn: "",
     sno: "",
     yoc: "",
     description: "",
-    itemCondition: "",
+    condition: "",
   });
 
   function handleChange(event) {
@@ -48,13 +48,13 @@ function NewItem() {
           </ImageUploadContainer>
         </label>
         <select>
-          <option name="state" value={itemData.state}>
-            verfügbar
+          <option name="availability" value={itemData.availability}>
+            lagernd
           </option>
-          <option name="state" value={itemData.state}>
+          <option name="availability" value={itemData.availability}>
             vermietet
           </option>
-          <option name="state" value={itemData.state}>
+          <option name="availability" value={itemData.availability}>
             gesperrt
           </option>
         </select>
@@ -62,8 +62,8 @@ function NewItem() {
           Artikelbezeichnung
           <input
             placeholder="Artikelbezeichnung"
-            value={itemData.headline}
-            name="headline"
+            value={itemData.title}
+            name="title"
             onChange={handleChange}
             required
           />
@@ -118,7 +118,7 @@ function NewItem() {
             type="range"
             min="1"
             max="10"
-            value={itemData.itemCondition}
+            value={itemData.condition}
             onChange={handleChange}
             name="itemCondition"
             required

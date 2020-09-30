@@ -1,5 +1,5 @@
-export const getItems = async () => {
-  const response = await fetch("/api/items");
+export const getRentals = async () => {
+  const response = await fetch("/api/rent");
   if (!response.ok) {
     throw response;
   }
@@ -7,8 +7,8 @@ export const getItems = async () => {
   return result;
 };
 
-export const getItem = async (id) => {
-  const response = await fetch(`/api/items/${id}`);
+export const getRent = async (id) => {
+  const response = await fetch(`/api/rent/${id}`);
   if (!response.ok) {
     throw response;
   }
@@ -16,13 +16,13 @@ export const getItem = async (id) => {
   return result;
 };
 
-export const postItem = async (item) => {
-  const response = await fetch("/api/items", {
+export const postRent = async (rent) => {
+  const response = await fetch("/api/rent", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(item),
+    body: JSON.stringify(rent),
   });
   if (!response.ok) {
     throw response;
@@ -31,8 +31,8 @@ export const postItem = async (item) => {
   return result;
 };
 
-export const deleteItem = async (id) => {
-  const response = await fetch(`/api/items/${id}`, {
+export const deleteRent = async (id) => {
+  const response = await fetch(`/api/rent/${id}`, {
     method: "DELETE",
   });
   if (!response.ok) {
@@ -42,8 +42,8 @@ export const deleteItem = async (id) => {
   return result;
 };
 
-export const updateItem = async (id, content) => {
-  const response = await fetch(`/api/items/${id}`, {
+export const updateRent = async (id, content) => {
+  const response = await fetch(`/api/rent/${id}`, {
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(content),

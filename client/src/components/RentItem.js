@@ -1,41 +1,40 @@
 import React, { useEffect, useState } from "react";
-import { getItems } from "../api/items";
+import { getRentals } from "../api/rentals";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 
 function ListItem() {
   const { id } = useParams();
-  const [items, setItems] = useState(null);
+  const [rentals, setRentals] = useState(null);
 
   useEffect(() => {
-    async function fetchItems() {
+    async function fetchRentals() {
       try {
-        const loadedItems = await getItems(id);
-        console.log(loadedItems);
-        setItems(loadedItems);
+        const loadedRentals = await getRentals(id);
+        console.log(loadedRentals);
+        setRentals(loadedRentals);
       } catch (error) {
         console.log(error);
       }
     }
-    fetchItems();
+    fetchRentals();
   }, [id]);
 
   return (
     <>
-      {items?.map((item) => (
-        <Link to={`/item/detail/${item.id}`} key={item.id} id={item.id}>
-          <Container href={`/item/detail/${item.id}`}>
-            <ItemPreview src={item.imgSrc} />
+      {rentals?.map((rent) => (
+        <Link to={`/rent/detail/${rent.id}`} key={rent.id} id={rent.id}>
+          <Container href={`/rent/detail/${rent.id}`}>
             <Details>
-              <Title>{item.title}</Title>
-              <ProductStatus>
-                <State
-                  src={`/img/${item.availability}.svg`}
-                  alt={item.availability}
-                />
-                <SerialNo>{item.sno}</SerialNo>
-              </ProductStatus>
+              <Title>Client ID {rent.id}</Title>
+              <Title>
+                {rent.firstName} {rent.lastName}
+              </Title>
+              <Title>
+                {rent.dateFrom} - {rent.dateTo}
+              </Title>
+              <Title>Item ID {rent.item}</Title>
             </Details>
           </Container>
         </Link>
@@ -57,13 +56,6 @@ const Container = styled.div`
   }
 `;
 
-const ItemPreview = styled.img`
-  max-width: 40px;
-  max-height: 40px;
-  align-self: center;
-  border-radius: 50%;
-`;
-
 const Details = styled.div`
   padding: 0 10px;
   display: flex;
@@ -81,7 +73,7 @@ const Title = styled.h1`
   text-overflow: ellipsis;
 `;
 
-const ProductStatus = styled.div`
+const RentStatus = styled.div`
   display: flex;
   align-items: center;
 `;

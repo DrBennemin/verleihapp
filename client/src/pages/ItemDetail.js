@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import { getItem } from "../api/items";
 import { useParams } from "react-router-dom";
-import ArrowDownSrc from "../assets/arrow-down.svg";
 import HeaderEdit from "../components/HeaderEdit";
+import ArrowDownSrc from "../assets/arrow-down.svg";
 
 function ItemDetail() {
   const { id } = useParams();
@@ -22,26 +22,28 @@ function ItemDetail() {
     fetchItem();
   }, [id]);
 
-  console.log(item);
-
   return (
     <>
       <HeaderEdit title={"Artikel-Details"} />
       <Container key={item.id}>
         <Slider>
-          <img src={item.imgSrc} alt="milk-pump" />
+          <img src={item.imgSrc} alt={item.title} />
         </Slider>
         <Description>
           <Status>
-            <img src={`/img/${item.state}.svg`} alt={item.state} />
-            <span>{item.state}</span>
+            <img
+              src={`/img/${item.availability}.svg`}
+              alt={item.availability}
+            />
+            <span>{item.availability}</span>
             <img src={ArrowDownSrc} alt="status" />
           </Status>
-          <h1>{item.headline}</h1>
-          <p>{item.serialno}</p>
-          <p>{item.pzn}</p>
-          <p>{item.yoc}</p>
-          <p>{item.description}</p>
+          <h1>{item.title}</h1>
+          <p>Seriennummer: {item.sno}</p>
+          <p>PZN: {item.pzn}</p>
+          <p>Baujahr: {item.yoc}</p>
+          <p>Zustand: {item.condition}</p>
+          <p>Beschreibung: {item.description}</p>
         </Description>
       </Container>
     </>
