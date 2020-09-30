@@ -12,7 +12,10 @@ function footer() {
   return (
     <Footer>
       <FooterLeft>
-        <img src={BottomBarAvailable} alt="bottom-bar-available" />
+        <Link to="/list/available">
+          <img src={BottomBarAvailable} alt="bottom-bar-available" />
+        </Link>
+
         <img src={BottomBarRented} alt="bottom-bar-rented" />
       </FooterLeft>
       <FooterMiddle>
@@ -43,6 +46,7 @@ const Footer = styled.footer`
 const FooterLeft = styled.div`
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-grow: 1;
   background-color: #28beb4;
   height: 67px;
