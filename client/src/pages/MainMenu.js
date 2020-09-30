@@ -15,10 +15,12 @@ function MainMenu() {
       <HeaderGoBack title={"Menü"} />
       <Container>
         <ul>
-          <li>
-            <img src={MenuAvailableSrc} alt="verfuegbar" />
-            Artikel auf Lager
-          </li>
+          <Link to="/list/available">
+            <li>
+              <img src={MenuAvailableSrc} alt="verfuegbar" />
+              Artikel auf Lager
+            </li>
+          </Link>
           <li>
             <img src={MenuRentedSrc} alt="vermietet" />
             Artikel verliehen
