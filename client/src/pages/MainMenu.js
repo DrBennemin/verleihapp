@@ -17,7 +17,7 @@ function MainMenu() {
         <ul>
           <Link to="/list/available">
             <li>
-              <img src={MenuAvailableSrc} alt="verfuegbar" />
+              <img src={MenuAvailableSrc} alt="lagernd" />
               Artikel auf Lager
             </li>
           </Link>
@@ -34,7 +34,6 @@ function MainMenu() {
               Artikel verliehen
             </li>
           </Link>
-
           <hr />
           <li>
             <img src={MenuDueDateSrc} alt="menu-due-date" />
