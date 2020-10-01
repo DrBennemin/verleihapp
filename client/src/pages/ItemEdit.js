@@ -50,7 +50,9 @@ function ItemEdit() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    await updateItem(item);
+    console.log(id, item);
+    await updateItem(id, item);
+    clearForm();
   }
 
   function clearForm() {
@@ -74,29 +76,43 @@ function ItemEdit() {
             <span>{item.availability}</span>
             <img src={ArrowDownSrc} alt="status" />
           </Status>
-          <h1>{item.title}</h1>
+          <Title>
+            <input
+              placeholder={item.title}
+              onChange={handleChange}
+              name="title"
+            />
+          </Title>
           <label>
             Seriennummer:
-            <input placeholder={item.sno} onChange={handleChange} />
+            <input placeholder={item.sno} onChange={handleChange} name="sno" />
           </label>
           <label>
             PZN:
-            <input placeholder={item.pzn} onChange={handleChange} />
+            <input placeholder={item.pzn} onChange={handleChange} name="pzn" />
           </label>
           <label>
             Baujahr:
-            <input placeholder={item.yoc} onChange={handleChange} />
+            <input placeholder={item.yoc} onChange={handleChange} name="yoc" />
           </label>
           <label>
             Zustand:
-            <input placeholder={item.condition} onChange={handleChange} />
+            <input
+              placeholder={item.condition}
+              onChange={handleChange}
+              name="condition"
+            />
           </label>
           <label>
             Beschreibung:
-            <input placeholder={item.description} onChange={handleChange} />
+            <input
+              placeholder={item.description}
+              onChange={handleChange}
+              name="description"
+            />
           </label>
         </Description>
-        <Submit type="submit" onClick={clearForm}>
+        <Submit type="submit">
           <img src={SaveSrc} alt="save-button" />
           <span>Speichern</span>
         </Submit>
@@ -123,6 +139,10 @@ const Slider = styled.div`
     max-height: 180px;
     align-self: center;
   }
+`;
+
+const Title = styled.label`
+  font-size: 1.2rem;
 `;
 
 const Description = styled.div`
