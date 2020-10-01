@@ -6,6 +6,7 @@ import MoreSrc from "../assets/more.svg";
 import ArrowLeft from "../assets/arrow-left.svg";
 import Header from "./Header";
 import { deleteItem } from "../api/items";
+import OverlayContainer from "./OverlayContainer";
 
 HeaderEdit.propTypes = {
   title: PropTypes.string,
@@ -15,9 +16,11 @@ function HeaderEdit({ title }) {
   const history = useHistory();
   const { id } = useParams();
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [overlay, setOverlay] = useState(false);
 
   return (
     <Header
+      onClick={() => setToggleMenu(false)}
       title={<Link to="/">{title}</Link>}
       left={
         <Link onClick={() => history.goBack()}>
@@ -37,13 +40,25 @@ function HeaderEdit({ title }) {
 
               <button
                 onClick={() => {
-                  deleteItem(id);
-                  history.push("/");
+                  setOverlay(true);
                 }}
               >
                 Löschen
               </button>
             </Options>
+          )}
+
+          {overlay && (
+            <OverlayContainer
+              onHandleDelete={() => {
+                deleteItem(id);
+                history.push("/");
+              }}
+              onSetOverlay={() => {
+                setOverlay();
+                setToggleMenu(false);
+              }}
+            />
           )}
         </More>
       }

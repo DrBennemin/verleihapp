@@ -1,17 +1,6 @@
 {
   "items": [
     {
-      "id": 1,
-      "availability": "lagernd",
-      "title": "Leichgewicht-Rollator Topro Troja",
-      "pzn": 1253389,
-      "sno": "U1761530762",
-      "yoc": 1977,
-      "condition": 3,
-      "imgSrc": "https://images.philips.com/is/image/PhilipsConsumer/SCF332_31-IMS-de_DE?$jpglarge$&wid=960",
-      "description": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus."
-    },
-    {
       "id": 2,
       "availability": "lagernd",
       "title": "Standardrollstuhl S-Eco 300",
@@ -47,9 +36,9 @@
     {
       "id": 5,
       "availability": "gesperrt",
-      "title": "Inhaliergerät Omron X3000",
+      "title": "sehr geil!",
       "pzn": 8507537,
-      "sno": "14243140518",
+      "sno": "Atazag",
       "yoc": 1993,
       "condition": 10,
       "imgSrc": "https://www.sanitaetshaus-24.de/images/stories/virtuemart/product/standard-rollator-migo-50-19.jpg",
@@ -329,18 +318,6 @@
       "condition": 1,
       "imgSrc": "https://www.sanitaetshaus-24.de/images/stories/virtuemart/product/standard-rollator-migo-50-19.jpg",
       "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.\n\nSed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus."
-    },
-    {
-      "imgSrc": "",
-      "availability": "",
-      "title": "Leichtgewichtrollstuhl",
-      "pzn": "12345678",
-      "sno": "444555666999",
-      "yoc": "2011-06-30",
-      "description": "Ziemlich leichter Leichtgewichtrollstuhl ",
-      "condition": "",
-      "itemCondition": "4",
-      "id": 31
     }
   ],
   "rent": [
