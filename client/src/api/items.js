@@ -75,3 +75,12 @@ export const updateItem = async (id, content) => {
   });
   return response.ok;
 };
+
+export const searchItem = async (query) => {
+  const response = await fetch(`/api/items/?q=${query}`);
+  if (!response.ok) {
+    throw response;
+  }
+  const result = await response.json();
+  return result;
+};

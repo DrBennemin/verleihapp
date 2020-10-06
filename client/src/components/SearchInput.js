@@ -1,13 +1,19 @@
-// import React from "react";
+import React from "react";
+import PropTypes from "prop-types";
 
-// function SearchInput({ value, onChange }) {
-//   return (
-//     <input
-//       placeholder="Suchen..."
-//       value={value}
-//       onChange={(event) => onChange(event.target.value.trim())}
-//     />
-//   );
-// }
+SearchInput.propTypes = {
+  onSetQuery: PropTypes.func,
+  query: PropTypes.string,
+};
 
-// export default SearchInput;
+function SearchInput({ onSetQuery, query }) {
+  return (
+    <input
+      onChange={(event) => onSetQuery(event.target.value)}
+      value={query}
+      placeholder="Suchen..."
+    />
+  );
+}
+
+export default SearchInput;

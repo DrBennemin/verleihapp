@@ -18,6 +18,7 @@ import {
 } from "react-router-dom";
 import MainMenu from "./pages/MainMenu";
 import ItemEdit from "./pages/ItemEdit";
+import SearchResults from "./pages/SearchResults";
 
 function App() {
   return (
@@ -58,6 +59,9 @@ function App() {
             </Route>
             <Route path="/rent">
               <Rentals />
+            </Route>
+            <Route path="/search">
+              <SearchResults />
             </Route>
             <Route exact path="/">
               <Redirect to="/list" />
