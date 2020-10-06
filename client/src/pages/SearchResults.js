@@ -8,6 +8,7 @@ function SearchResults() {
   const [query, setQuery] = useState("");
   const [resultItems, setResultItems] = useState([]);
   const [resultRentals, setResultRentals] = useState([]);
+  // const [toggleSearch, setToggleSearch] = useState(false);
 
   useEffect(() => {
     async function fetchResults() {
@@ -26,7 +27,12 @@ function SearchResults() {
   return (
     <>
       <Container>
-        <SearchInput query={query} onSetQuery={setQuery} />
+        <SearchInput
+          query={query}
+          onSetQuery={setQuery}
+          // onClick={() => setToggleSearch(true)}
+        />
+        {/* {toggleSearch && ( */}
         <Results>
           <ItemResults>
             {resultItems?.map((loadedItem) => (
@@ -42,6 +48,7 @@ function SearchResults() {
             ))}
           </RentResults>
         </Results>
+        {/* )} */}
       </Container>
     </>
   );
