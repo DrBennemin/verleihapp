@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import React, { useEffect, useState } from "react";
 import { searchItem } from "../api/items";
+import { searchRent } from "../api/rentals";
 import SearchInput from "../components/SearchInput";
 
 function SearchResults() {
@@ -11,6 +12,8 @@ function SearchResults() {
     async function fetchItems() {
       try {
         const loadedItems = await searchItem(query);
+        const loadedRentals = await searchRent(query);
+        console.log(loadedRentals);
         setResultItems(loadedItems);
       } catch (error) {
         console.log(error);
@@ -22,6 +25,7 @@ function SearchResults() {
   return (
     <Container>
       <SearchInput query={query} onSetQuery={setQuery} />
+      <p>Sie suchen nach: {query}</p>
       <Results>
         {resultItems?.map((loadedItem) => (
           <li key={loadedItem.id}>{loadedItem.title}</li>
