@@ -8,7 +8,7 @@ function SearchResults() {
   const [query, setQuery] = useState("");
   const [resultItems, setResultItems] = useState([]);
   const [resultRentals, setResultRentals] = useState([]);
-  // const [toggleSearch, setToggleSearch] = useState(false);
+  const [toggleSearch, setToggleSearch] = useState(false);
 
   useEffect(() => {
     async function fetchResults() {
@@ -30,25 +30,25 @@ function SearchResults() {
         <SearchInput
           query={query}
           onSetQuery={setQuery}
-          // onClick={() => setToggleSearch(true)}
+          onSetToggleSearch={setToggleSearch}
         />
-        {/* {toggleSearch && ( */}
-        <Results>
-          <ItemResults>
-            {resultItems?.map((loadedItem) => (
-              <li key={loadedItem.id}>{loadedItem.title}</li>
-            ))}
-          </ItemResults>
+        {toggleSearch && (
+          <Results>
+            <ItemResults>
+              {resultItems?.map((loadedItem) => (
+                <li key={loadedItem.id}>{loadedItem.title}</li>
+              ))}
+            </ItemResults>
 
-          <RentResults>
-            {resultRentals?.map((loadedRentals) => (
-              <li key={loadedRentals.id}>
-                {loadedRentals.firstName} {loadedRentals.lastName}
-              </li>
-            ))}
-          </RentResults>
-        </Results>
-        {/* )} */}
+            <RentResults>
+              {resultRentals?.map((loadedRentals) => (
+                <li key={loadedRentals.id}>
+                  {loadedRentals.firstName} {loadedRentals.lastName}
+                </li>
+              ))}
+            </RentResults>
+          </Results>
+        )}
       </Container>
     </>
   );
