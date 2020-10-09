@@ -53,6 +53,7 @@ const GlobalCSS = () => {
           display: flex;
           flex-direction: column;
           align-items: center;
+          padding-bottom: 2rem;
         }
         button {
           outline: none;

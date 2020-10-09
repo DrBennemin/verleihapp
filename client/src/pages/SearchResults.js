@@ -47,6 +47,7 @@ function SearchResults() {
         {toggleSearch && (
           <Results>
             <ItemResults>
+              Hilfsmittel:
               {resultItems?.map((loadedItem) => (
                 <Link
                   to={`/item/detail/${loadedItem.id}`}
@@ -59,6 +60,7 @@ function SearchResults() {
             </ItemResults>
 
             <RentResults>
+              Kunden:
               {resultRentals?.map((loadedRentals) => (
                 <Link
                   to={`/rent/detail/${loadedRentals.id}`}
@@ -89,16 +91,9 @@ const Container = styled.div`
 
 const Results = styled.div`
   display: flex;
-  align-self: center;
-  width: 90%;
-  padding: 10px;
-  background-color: white;
-  height: 40%;
-  overflow: auto;
+  justify-content: center;
+  width: 100%;
   margin-top: -10px;
-  & a {
-    cursor: pointer;
-  }
 `;
 const ItemResults = styled.ul`
   padding: 0;

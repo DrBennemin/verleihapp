@@ -30,7 +30,9 @@ function footer() {
         <Link to="/list/notavailable">
           <img src={BottomBarNotAvailable} alt="bottom-bar-not-available" />
         </Link>
-        <img src={BottomBarSearch} alt="bottom-bar-search" />
+        <Link to="/search">
+          <img src={BottomBarSearch} alt="bottom-bar-search" />
+        </Link>
       </FooterRight>
     </Footer>
   );
