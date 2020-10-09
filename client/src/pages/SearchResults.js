@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { searchItem } from "../api/items";
 import { searchRent } from "../api/rentals";
 import SearchInput from "../components/SearchInput";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Menu from "../assets/menu.svg";
 import HeaderGoBack from "../components/HeaderGoBack";
 
@@ -12,7 +12,6 @@ function SearchResults() {
   const [resultItems, setResultItems] = useState([]);
   const [resultRentals, setResultRentals] = useState([]);
   const [toggleSearch, setToggleSearch] = useState(false);
-  const { id } = useParams();
 
   useEffect(() => {
     async function fetchResults() {
