@@ -29,51 +29,52 @@ function SearchResults() {
   }, [query]);
 
   return (
-    <Container>
-      {/* <HeaderGoBack
+    <>
+      <HeaderGoBack
         title={"Suche"}
         left={
           <Link to="/">
             <img src={Menu} alt="menu-icon" />
           </Link>
         }
-      /> */}
-
-      <SearchInput
-        query={query}
-        onSetQuery={setQuery}
-        onSetToggleSearch={setToggleSearch}
       />
-      {toggleSearch && (
-        <Results>
-          <ItemResults>
-            {resultItems?.map((loadedItem) => (
-              <Link
-                to={`/item/detail/${loadedItem.id}`}
-                key={loadedItem.id}
-                id={loadedItem.id}
-              >
-                <li>{loadedItem.title}</li>
-              </Link>
-            ))}
-          </ItemResults>
+      <Container>
+        <SearchInput
+          query={query}
+          onSetQuery={setQuery}
+          onSetToggleSearch={setToggleSearch}
+        />
+        {toggleSearch && (
+          <Results>
+            <ItemResults>
+              {resultItems?.map((loadedItem) => (
+                <Link
+                  to={`/item/detail/${loadedItem.id}`}
+                  key={loadedItem.id}
+                  id={loadedItem.id}
+                >
+                  <li>{loadedItem.title}</li>
+                </Link>
+              ))}
+            </ItemResults>
 
-          <RentResults>
-            {resultRentals?.map((loadedRentals) => (
-              <Link
-                to={`/rent/detail/${loadedRentals.id}`}
-                key={loadedRentals.id}
-                id={loadedRentals.id}
-              >
-                <li>
-                  {loadedRentals.firstName} {loadedRentals.lastName}
-                </li>
-              </Link>
-            ))}
-          </RentResults>
-        </Results>
-      )}
-    </Container>
+            <RentResults>
+              {resultRentals?.map((loadedRentals) => (
+                <Link
+                  to={`/rent/detail/${loadedRentals.id}`}
+                  key={loadedRentals.id}
+                  id={loadedRentals.id}
+                >
+                  <li>
+                    {loadedRentals.firstName} {loadedRentals.lastName}
+                  </li>
+                </Link>
+              ))}
+            </RentResults>
+          </Results>
+        )}
+      </Container>
+    </>
   );
 }
 
@@ -95,6 +96,9 @@ const Results = styled.div`
   height: 40%;
   overflow: auto;
   margin-top: -10px;
+  & a {
+    cursor: pointer;
+  }
 `;
 const ItemResults = styled.ul`
   padding: 0;
