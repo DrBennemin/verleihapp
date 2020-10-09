@@ -50,3 +50,12 @@ export const updateRent = async (id, content) => {
   });
   return response.ok;
 };
+
+export const searchRent = async (query) => {
+  const response = await fetch(`/api/rent/?q=${query}`);
+  if (!response.ok) {
+    throw response;
+  }
+  const result = await response.json();
+  return result;
+};

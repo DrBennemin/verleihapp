@@ -10,7 +10,7 @@ OverlayModal.propTypes = {
 function OverlayModal({ onHandleDelete, onSetOverlay }) {
   return (
     <Container>
-      <Header>Überschrift</Header>
+      <Header>Artikel löschen?</Header>
       <Main>Wollen Sie diesen Artikel wirklich löschen?</Main>
       <Footer>
         <button onClick={() => onHandleDelete(true)}>Ja</button>

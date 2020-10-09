@@ -20,7 +20,6 @@ function HeaderEdit({ title }) {
 
   return (
     <Header
-      onClick={() => setToggleMenu(false)}
       title={<Link to="/">{title}</Link>}
       left={
         <Link onClick={() => history.goBack()}>
