@@ -2,19 +2,20 @@ import React from "react";
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
 import Logo from "../assets/medirent_logo_primary.svg";
+import { Link } from "react-router-dom";
 
 Header.propTypes = {
-  title: PropTypes.string,
   left: PropTypes.node,
   right: PropTypes.node,
 };
 
-function Header({ title, left, right }) {
+function Header({ left, right }) {
   return (
     <Container>
       {left}
-      <LogoImg src={Logo} alt="Logo" />
-      {/* <Title>{title}</Title> */}
+      <Link to="/">
+        <LogoImg src={Logo} alt="Logo" />
+      </Link>
       {right}
     </Container>
   );
@@ -27,10 +28,7 @@ const Container = styled.header`
   width: 100vw;
   background-color: #fcfcfc;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-  & :first-child {
-    justify-self: center;
-    align-self: center;
-  }
+  place-items: center;
 `;
 
 // s

@@ -67,6 +67,7 @@ const Slider = styled.div`
     max-width: 180px;
     max-height: 180px;
     align-self: center;
+    border-radius: 5px;
   }
 `;
 
