@@ -43,6 +43,7 @@ function SearchResults() {
           onSetQuery={setQuery}
           onSetToggleSearch={setToggleSearch}
         />
+
         {toggleSearch && (
           <Results>
             <ItemResults>
